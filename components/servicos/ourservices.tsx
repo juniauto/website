@@ -93,7 +93,11 @@ const OurServices = () => (
                                     <i className="fa fa-cog" />
                                 </a>
                                 <h4>Transporte de máquinas</h4>
-                                <p>Se você está precisando transportar uma máquina na região de Campo Grande saiba que estamos aqui para te ajudar. Entre em contato conosco e saiba de mais detalhes</p>
+                                <p>
+                                    Se você está precisando transportar uma máquina na região de Campo Grande saiba que estamos aqui para te ajudar.
+                                    Trabalhamos também com carretas para transporte de máquinas pesadas, tipo retro escavadeira, acabadora, rolo de asfalto, etc...<br />
+                                    Entre em contato conosco e saiba de mais detalhes
+                                </p>
                             </div>
                         </div>
                         {/* end about-details */}
