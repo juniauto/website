@@ -6,7 +6,7 @@ const AboutUS = () => (
             <div className="row">
                 <div className="col-md-12 col-sm-12 col-xs-12">
                     <div className="section-headline text-center">
-                        <h2>Auto Socorro 24h Juniauto</h2>
+                        <h1 className="h2">Auto Socorro 24h Juniauto</h1>
                     </div>
                 </div>
             </div>
