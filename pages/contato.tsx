@@ -2,51 +2,17 @@ import React from 'react';
 import Head from 'next/head'
 
 import PageContainer from '../components/page/container';
-import AboutUs from '../components/home/aboutus';
-import OurServices from '../components/home/ourservices';
-import ContactUsForm from '../components/home/contactusform';
-import Hero from '../components/home/hero';
+import ContactUsForm from '../components/contact/contactusform';
 
-export default function Home() {
+export default function ContactUsPage() {
   return (
     <PageContainer>
 
       <Head>
-        <title>Auto Socorro Juniauto - Reboque para carros e motos em Campo Grande e região</title>
+        <title>Reboque de carros e motos em Campo Grande e região: Fale Conosco</title>
       </Head>
 
-      <div id="reacthome" className="slider-area">
-        <Hero />
-      </div>
-
-      <main id="main">
-
-        <AboutUs />
-
-        {/* ======= Skills Section ======= */}
-        <div className="our-skill-area fix hidden-sm">
-          <div className="test-overly" />
-          <div className="skill-bg area-padding-2">
-            <div className="container">
-              {/* section-heading end */}
-              <div className="row">
-                {/* single-skill start */}
-                <div className="col-xs-12 col-sm-12 col-md-12 text-center">
-                  <div className="single-skill">
-                    <div className="progress-circular">
-                      <h3 className="progress-h4">mais de 50.000 clientes atendidos</h3>
-                    </div>
-                  </div>
-                </div>
-                {/* single-skill end */}
-              </div>
-            </div>
-          </div>
-        </div>{/* End Skills Section */}
-
-        <OurServices />
-
-
+      <main id="main" style={{ 'paddingTop': '60px' }}>
         {/* ======= Suscribe Section ======= */}
         <div id="whatsapp" className="suscribe-area">
           <div className="container">
@@ -68,7 +34,7 @@ export default function Home() {
               <div className="row">
                 <div className="col-md-12 col-sm-12 col-xs-12">
                   <div className="section-headline text-center">
-                    <h2>Fale Conosco</h2>
+                    <h1 className="h2">Fale Conosco</h1>
                   </div>
                 </div>
               </div>

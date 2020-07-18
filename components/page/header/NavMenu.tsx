@@ -17,7 +17,9 @@ const NaveMenuItem = (props: NaveMenuItemProps) => {
 
     return (
         <li className={className}>
-            <a href={props.href} className="nav-link">{props.title}</a>
+            <Link passHref href={props.href}>
+                <a className="nav-link">{props.title}</a>
+            </Link>
         </li>
     )
 };
