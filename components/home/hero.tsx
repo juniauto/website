@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactWOW from 'react-wow';
 import LazyHero from 'react-lazy-hero';
 
 const WoW = () => {
