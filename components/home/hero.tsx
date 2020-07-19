@@ -1,111 +1,94 @@
 import React from 'react';
-import LazyHero from 'react-lazy-hero';
+
+
 
 const WoW = () => {
-    const truh = true;
-
-    if (truh) {
-        return (
-            <LazyHero color="#444" opacity={0.5} imageSrc="/assets/img/slider/slider_j_2.png">
-                <div className="slider-content">
-                    {/* layer 1 */}
-                    <div className="layer-1-1 hidden-xs">
-                        <h2 className="title1">Atendimento 24 Horas</h2>
-                    </div>
-                    {/* layer 2 */}
+    return (
+        <div className="sc-AxirZ khTpiN">
+            <div className="sc-AxjAm sc-AxiKw bJkZLT">
+                <picture className="background">
+                    <source srcSet={require('../../public/assets/img/slider/slider_j_2.png?webp')} type="image/webp" />
+                    <source srcSet={require('../../public/assets/img/slider/slider_j_2.png')} type="image/jpeg" />
+                    <img className="image" src={require('../../public/assets/img/slider/slider_j_2.png')} />
+                </picture>
+            </div>
+            <div color="#444" className="sc-AxjAm sc-AxhCb fDvTJJ">
+                <div>
+                    <div className="slider-content">
+                        <div className="layer-1-1 hidden-xs">
+                            <h2 className="title1">Atendimento 24 Horas</h2>
+                        </div>
                     <div className="layer-1-2">
                         <h1 className="title2">Reboque para carros e motos em Campo Grande e região</h1>
                     </div>
-                    {/* layer 3 */}
                     <div className="layer-1-3 hidden-xs">
-                        <a target="_blank" className="ready-btn right-btn page-scroll" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">Entrar em contato <i className="fa fa-whatsapp" /></a>
+                        <a target="_blank" className="ready-btn right-btn page-scroll" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
+                            Entrar em contato <i className="fa fa-whatsapp" />
+                        </a>
                     </div>
                 </div>
-            </LazyHero>
-        );
-    }
+                </div>
+            </div>
+            <style jsx>{`
+                .background {
+                    height: 100%;
+                    display: flex;
+                }
+                .background .image {
+                    height: auto;
+                    width: auto;
+                    max-width: initial;
+                    min-width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            `}</style>
+            <style jsx>{`
+                .khTpiN {
+                    position:relative;
+                    min-height:50vh;
+                }
+                .bJkZLT {
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                    background-attachment:scroll;
+                    background-position:center;
+                    background-repeat:no-repeat;
+                    background-size:cover;
+                    opacity:1;
+                    -webkit-transition-duration:600ms;
+                    transition-duration:600ms;
+                    -webkit-transition-property:opacity;
+                    transition-property:opacity;
+                    -webkit-transition-timing-function:ease-in-out;
+                    transition-timing-function:ease-in-out;
+                }
+                .fDvTJJ {
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    bottom:0;
+                    left:0;
+                    display:-webkit-box;
+                    display:-webkit-flex;
+                    display:-ms-flexbox;
+                    display:flex;
+                    -webkit-box-pack:center;
+                    -webkit-justify-content:center;
+                    -ms-flex-pack:center;
+                    justify-content:center;
+                    -webkit-align-items:center;
+                    -webkit-box-align:center;
+                    -ms-flex-align:center;
+                    align-items:center;
+                    text-align:center;
+                    background-color:rgba(68,68,68,0.5);
+                }
 
-    return (
-
-        <div className="bend niceties preview-2">
-
-            <div id="ensign-nivoslider" className="slides">
-                <img src="assets/img/slider/slider1.jpg" alt="" title="#slider-direction-1" />
-                <img src="assets/img/slider/slider2.jpg" alt="" title="#slider-direction-2" />
-                <img src="assets/img/slider/slider3.jpg" alt="" title="#slider-direction-3" />
-            </div>
-            {/* direction 1 */}
-            <div id="slider-direction-1" className="slider-direction slider-one">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12 col-sm-12 col-xs-12">
-                            <div className="slider-content">
-                                {/* layer 1 */}
-                                <div className="layer-1-1 hidden-xs wow animate__slideInDown animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <h2 className="title1">The Best Business Information </h2>
-                                </div>
-                                {/* layer 2 */}
-                                <div className="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <h1 className="title2">We're In The Business Of Helping You Start Your Business</h1>
-                                </div>
-                                {/* layer 3 */}
-                                <div className="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <a className="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                    <a className="ready-btn page-scroll" href="#about">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* direction 2 */}
-            <div id="slider-direction-2" className="slider-direction slider-two">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12 col-sm-12 col-xs-12">
-                            <div className="slider-content text-center">
-                                {/* layer 1 */}
-                                <div className="layer-1-1 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <h2 className="title1">The Best Business Information </h2>
-                                </div>
-                                {/* layer 2 */}
-                                <div className="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s" data-wow-delay=".1s">
-                                    <h1 className="title2">We're In The Business Of Get Quality Business Service</h1>
-                                </div>
-                                {/* layer 3 */}
-                                <div className="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <a className="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                    <a className="ready-btn page-scroll" href="#about">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* direction 3 */}
-            <div id="slider-direction-3" className="slider-direction slider-two">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-md-12 col-sm-12 col-xs-12">
-                            <div className="slider-content">
-                                {/* layer 1 */}
-                                <div className="layer-1-1 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <h2 className="title1">The Best business Information </h2>
-                                </div>
-                                {/* layer 2 */}
-                                <div className="layer-1-2 wow animate__fadeIn animate__animated" data-wow-duration="2s" data-wow-delay=".1s">
-                                    <h1 className="title2">Helping Business Security &amp; Peace of Mind for Your Family</h1>
-                                </div>
-                                {/* layer 3 */}
-                                <div className="layer-1-3 hidden-xs wow animate__slideInUp animate__animated" data-wow-duration="2s" data-wow-delay=".2s">
-                                    <a className="ready-btn right-btn page-scroll" href="#services">See Services</a>
-                                    <a className="ready-btn page-scroll" href="#about">Learn More</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            `}</style>
         </div>
     );
 };
