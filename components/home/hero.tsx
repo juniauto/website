@@ -9,7 +9,7 @@ const WoW = () => {
                 <picture className="background">
                     <source srcSet={require('../../public/assets/img/slider/slider_j_2.png?webp')} type="image/webp" />
                     <source srcSet={require('../../public/assets/img/slider/slider_j_2.png')} type="image/jpeg" />
-                    <img className="image" src={require('../../public/assets/img/slider/slider_j_2.png')} />
+                    <img alt="dois caminhões reboque transportando carros" className="image" src={require('../../public/assets/img/slider/slider_j_2.png')} />
                 </picture>
             </div>
             <div color="#444" className="sc-AxjAm sc-AxhCb fDvTJJ">
@@ -22,8 +22,8 @@ const WoW = () => {
                         <h1 className="title2">Reboque para carros e motos em Campo Grande e região</h1>
                     </div>
                     <div className="layer-1-3 hidden-xs">
-                        <a target="_blank" className="ready-btn right-btn page-scroll" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
-                            Entrar em contato <i className="fa fa-whatsapp" />
+                        <a rel="noreferrer" target="_blank" className="ready-btn right-btn page-scroll" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
+                            Entrar em contato <i className="icon-whatsapp" />
                         </a>
                     </div>
                 </div>

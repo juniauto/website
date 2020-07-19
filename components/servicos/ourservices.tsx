@@ -16,9 +16,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-car" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-cab" />
+                                </span>
                                 <h4>Serviço de reboque para carros</h4>
                                 <p>
                                     Possuímos veículos novos prontos para prestar serviços de remoção 24 horas para veículos leves.
@@ -35,9 +35,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-motorcycle" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-motorcycle" />
+                                </span>
                                 <h4>Transporte de motos</h4>
                                 <p>
                                     Fazemos o transporte de motos com o máximo de segurança e agilidade.
@@ -53,9 +53,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-handshake-o" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-handshake-o" />
+                                </span>
                                 <h4>Carga de Bateria</h4>
                                 <p>
                                     Desligou o carro e esqueceu o farol aceso ou até mesmo ouviu muita música e descarregou a bateria do carro?<br />
@@ -71,9 +71,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-truck" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-truck" />
+                                </span>
                                 <h4>Transporte de caminhões de pequeno porte</h4>
                                 <p>
                                     Oferecemos o transporte de caminhões de pequeno porte, também conhecidos como caminhões 3/4.
@@ -89,9 +89,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-cog" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-cog" />
+                                </span>
                                 <h4>Transporte de máquinas</h4>
                                 <p>
                                     Se você está precisando transportar uma máquina na região de Campo Grande saiba que estamos aqui para te ajudar.
@@ -109,9 +109,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-phone" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-phone" />
+                                </span>
                                 <h4>Atendimento 24 Horas</h4>
                                 <p>
                                     Você possui alguma dúvida ou até mesmo precisa de uma indicação? Entre em contato conosco e vamos te atender da melhor maneira possível! Estamos aguardando o seu contato.

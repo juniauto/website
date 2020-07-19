@@ -16,9 +16,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-car" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-cab" />
+                                </span>
                                 <h4>Reboque para carros e motos</h4>
                                 <p>Possuímos veículos novos prontos para prestar serviços de remoção 24 horas para veículos leves e motos.</p>
                             </div>
@@ -30,9 +30,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-motorcycle" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-motorcycle" />
+                                </span>
                                 <h4>S.O.S.</h4>
                                 <p>Trabalhamos também com a realização de S.O.S. através de profissionais treinados para atender o mais prontamente possível.</p>
                             </div>
@@ -45,9 +45,9 @@ const OurServices = () => (
                     <div className="about-move">
                         <div className="services-details">
                             <div className="single-services">
-                                <a className="services-icon" href="#">
-                                    <i className="fa fa-phone" />
-                                </a>
+                                <span className="services-icon">
+                                    <i className="icon-phone" />
+                                </span>
                                 <h4>Atendimento 24 Horas</h4>
                                 <p>Para poder gerar um melhor atendimento trabalhamos 24 horas por dia, não deixando de servir durante domingos ou feriados.</p>
                             </div>

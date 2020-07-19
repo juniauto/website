@@ -27,7 +27,7 @@ const ContactUsForm = () => {
                     <div className="sent-message">Your message has been sent. Thank you!</div>
                 </div>
                 <div className="text-center">
-                    <button type="submit">Enviar mensagem <i className="fa fa-whatsapp" /></button>
+                    <button type="submit">Enviar mensagem <i className="icon-whatsapp" /></button>
                 </div>
             </form>
         </div>
