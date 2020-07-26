@@ -1,6 +1,5 @@
 import React, { Props } from 'react';
 import Favicons from './favicons';
-import StyleSheets from './stylesheets';
 import Header from './header';
 import Footer from './footer';
 import Head from 'next/head';
@@ -15,7 +14,6 @@ const PageContainer = (props: Props<any>) => (
 
       <Analytics />
       <Favicons />
-      <StyleSheets />
       <Header />
 
       {props.children}

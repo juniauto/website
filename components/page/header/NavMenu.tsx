@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { withRouter } from 'next/router';
 import { WithRouterProps } from 'next/dist/client/with-router';
 import classNames from 'classnames';
+import LogoIcon from '../../atoms/Logo';
 
 interface NaveMenuItemProps {
     title: string;
@@ -34,7 +35,10 @@ const NavMenu = (props: NavMenuProps) => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
             <Link href="/" passHref>
-                <a className="navbar-brand juniauto-logo">JUNIAUTO</a>
+                <a className="navbar-brand juniauto-logo">
+                    <span className="sr-only">JUNIAUTO</span>
+                    <LogoIcon height={48} />
+                </a>
             </Link>
             <button className="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Expandir navegação" onClick={toggle}>
                 <span className="navbar-toggler-icon" />

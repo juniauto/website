@@ -187,15 +187,6 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   background-color: rgba(255, 255, 0, 0.9);
 }
 
-.juniauto-logo {
-  font-family: "Horizon Juniauto";
-  letter-spacing: 2px;
-  font-weight: bold;
-  font-style: oblique;
-  -webkit-text-fill-color: black;
-  -webkit-text-stroke: white 2px;
-}
-
 #header .navbar-brand {
   font-size: 48px;
   margin: 0;
@@ -1071,14 +1062,16 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   padding: 100px;
 }
 
-.single-icon i {
-  font-size: 24px;
-  width: 50px;
-  height: 50px;
+.single-icon img {
+  height: 24px;
+}
+
+.single-icon-rounded {
   border: 1px solid #444;
-  line-height: 46px;
+  display: inline-block;
+  padding: 5px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .single-icon p {
@@ -1092,7 +1085,7 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 
 #google-map {
   height: 370px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .php-email-form .validate {
@@ -1732,23 +1725,6 @@ span.email-notes {
   text-transform: uppercase;
 }
 
-.footer-logo {
-  padding-bottom: 20px;
-}
-
-.footer-logo h2 {
-  color: #222;
-  padding: 0;
-  margin: 0;
-  font-size: 36px;
-  font-weight: bold;
-  line-height: 1;
-}
-
-.footer-logo h2 span {
-  color: #3ec1d5;
-}
-
 .footer-icons ul li {
   display: inline-block;
 }
@@ -1757,13 +1733,17 @@ span.email-notes {
   border: 1px solid #444;
   color: #444;
   display: block;
-  font-size: 16px;
   height: 40px;
-  line-height: 38px;
   margin-right: 5px;
-  text-align: center;
   width: 40px;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icons .footer-icon {
+  height: 16px;
 }
 
 .flicker-img > a {

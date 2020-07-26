@@ -1,34 +1,11 @@
-import React from 'react';
+import React, { useState, CSSProperties, useEffect } from 'react';
+import WhatsappIcon from '../icons/WhatsappIcon';
 
+const HeroPicture = () => {
+    const alternativeText = 'dois caminhões reboque transportando carros';
 
-
-const WoW = () => {
     return (
-        <div className="sc-AxirZ khTpiN">
-            <div className="sc-AxjAm sc-AxiKw bJkZLT">
-                <picture className="background">
-                    <source srcSet={require('../../public/assets/img/slider/slider_j_2.png?webp')} type="image/webp" />
-                    <source srcSet={require('../../public/assets/img/slider/slider_j_2.png')} type="image/jpeg" />
-                    <img alt="dois caminhões reboque transportando carros" className="image" src={require('../../public/assets/img/slider/slider_j_2.png')} />
-                </picture>
-            </div>
-            <div color="#444" className="sc-AxjAm sc-AxhCb fDvTJJ">
-                <div>
-                    <div className="slider-content">
-                        <div className="layer-1-1 hidden-xs">
-                            <h2 className="title1">Atendimento 24 Horas</h2>
-                        </div>
-                    <div className="layer-1-2">
-                        <h1 className="title2">Reboque para carros e motos em Campo Grande e região</h1>
-                    </div>
-                    <div className="layer-1-3 hidden-xs">
-                        <a rel="noreferrer" target="_blank" className="ready-btn right-btn page-scroll" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
-                            Entrar em contato <i className="icon-whatsapp" />
-                        </a>
-                    </div>
-                </div>
-                </div>
-            </div>
+        <picture className="background">
             <style jsx>{`
                 .background {
                     height: 100%;
@@ -41,12 +18,52 @@ const WoW = () => {
                     min-width: 100%;
                     object-fit: cover;
                     object-position: center;
+                    filter: blur(2px);
+                }
+
+                @media (min-width: 1024px) {
+                    .background .image {
+                       filter: none;
+                    }
                 }
             `}</style>
+            <source media="(min-width:1024px)" srcSet={require('../../public/assets/img/slider/01_1749w.png?webp')} type="image/webp" />
+            <source media="(min-width:1024px)" srcSet={require('../../public/assets/img/slider/01_1749w.png')} type="image/png" />
+            <source srcSet={require('../../public/assets/img/slider/01_0360w.png?webp')} type="image/webp" />
+            <img className="image" alt={alternativeText} src={require('../../public/assets/img/slider/01_1749w.png')} />
+        </picture>
+    )
+};
+
+const WoW = () => {
+    return (
+        <div className="sc-AxirZ khTpiN">
+            <div className="sc-AxjAm sc-AxiKw bJkZLT">
+                <HeroPicture />
+            </div>
+            <div color="#444" className="sc-AxjAm sc-AxhCb fDvTJJ">
+                <div>
+                    <div className="slider-content">
+                        <div className="layer-1-1 hidden-xs">
+                            <h2 className="title1">Atendimento 24 Horas</h2>
+                        </div>
+                    <div className="layer-1-2">
+                        <h1 className="title2">Reboque para carros e motos em Campo Grande e região</h1>
+                    </div>
+                    <div className="layer-1-3 hidden-xs">
+                        <a rel="noreferrer" target="_blank" className="ready-btn right-btn page-scroll" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
+                            Entrar em contato <WhatsappIcon height={16} style={{ height: '16px', marginBottom: '2px' }} />
+                        </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
             <style jsx>{`
                 .khTpiN {
                     position:relative;
                     min-height:50vh;
+                    overflow: hidden;
                 }
                 .bJkZLT {
                     position:absolute;

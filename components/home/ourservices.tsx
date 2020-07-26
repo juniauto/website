@@ -1,4 +1,7 @@
 import React from 'react';
+import CarIcon from '../icons/CarIcon';
+import HelmetIcon from '../icons/HelmetIcon';
+import PhoneIcon from '../icons/PhoneIcon';
 
 const OurServices = () => (
     <div id="services" className="services-area area-padding">
@@ -17,7 +20,7 @@ const OurServices = () => (
                         <div className="services-details">
                             <div className="single-services">
                                 <span className="services-icon">
-                                    <i className="icon-cab" />
+                                    <CarIcon height={36} />
                                 </span>
                                 <h4>Reboque para carros e motos</h4>
                                 <p>Possuímos veículos novos prontos para prestar serviços de remoção 24 horas para veículos leves e motos.</p>
@@ -31,7 +34,7 @@ const OurServices = () => (
                         <div className="services-details">
                             <div className="single-services">
                                 <span className="services-icon">
-                                    <i className="icon-motorcycle" />
+                                    <HelmetIcon height={36} />
                                 </span>
                                 <h4>S.O.S.</h4>
                                 <p>Trabalhamos também com a realização de S.O.S. através de profissionais treinados para atender o mais prontamente possível.</p>
@@ -46,7 +49,7 @@ const OurServices = () => (
                         <div className="services-details">
                             <div className="single-services">
                                 <span className="services-icon">
-                                    <i className="icon-phone" />
+                                    <PhoneIcon height={36} />
                                 </span>
                                 <h4>Atendimento 24 Horas</h4>
                                 <p>Para poder gerar um melhor atendimento trabalhamos 24 horas por dia, não deixando de servir durante domingos ou feriados.</p>

@@ -1,4 +1,8 @@
 import React from 'react';
+import LogoIcon from '../../atoms/Logo';
+import FacebookIcon from '../../icons/FacebookIcon';
+import GoogleIcon from '../../icons/GoogleIcon';
+import WhatsappIcon from '../../icons/WhatsappIcon';
 
 const Footer = () => (
     <footer>
@@ -8,9 +12,10 @@ const Footer = () => (
                     <div className="col-md-4 col-sm-4 col-xs-12">
                         <div className="footer-content">
                             <div className="footer-head">
-                                <div className="footer-logo">
-                                    <h2 className="juniauto-logo">JUNIAUTO</h2>
-                                </div>
+                                <h2 className="footer-logo">
+                                    <span className="sr-only">JUNIAUTO</span>
+                                    <LogoIcon loading="lazy" height={30} />
+                                </h2>
                                 <p>
                                     Atendemos dia e noite para uma melhor satisfação, saiba que pode contar conosco quando precisar.
                     </p>
@@ -18,17 +23,20 @@ const Footer = () => (
                                     <ul>
                                         <li>
                                             <a rel="noreferrer" target="_blank" href="https://fb.com/autosocorrojuniauto">
-                                                <span className="sr-only">curta nossa página no Facebook</span><i className="icon-facebook" />
+                                                <span className="sr-only">curta nossa página no Facebook</span>
+                                                <FacebookIcon className="footer-icon" height={16} />
                                             </a>
                                         </li>
                                         <li>
                                             <a rel="noreferrer" target="_blank" href="https://www.google.com/maps/place/Auto+Socorro+Juniauto+-+Reboque+e+S.O.S.+24+Horas/@-22.9393364,-43.6011208,11z/data=!4m5!3m4!1s0x0:0x88b29bf9cd4ca032!8m2!3d-22.9393364!4d-43.6011208">
-                                                <span className="sr-only">clique aqui para ver nossas avaliações no Google Maps</span><i className="icon-google" />
+                                                <span className="sr-only">clique aqui para ver nossas avaliações no Google Maps</span>
+                                                <GoogleIcon className="footer-icon" height={16} />
                                             </a>
                                         </li>
                                         <li>
                                             <a rel="noreferrer" target="_blank" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
-                                                <span className="sr-only">fale conosco no Whatsapp</span><i className="icon-whatsapp" />
+                                                <span className="sr-only">fale conosco no Whatsapp</span>
+                                                <WhatsappIcon className="footer-icon" height={16} />
                                             </a>
                                         </li>
                                     </ul>

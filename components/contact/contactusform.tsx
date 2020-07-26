@@ -1,4 +1,5 @@
 import React from 'react';
+import WhatsappIcon from '../icons/WhatsappIcon';
 
 const ContactUsForm = () => {
     return (
@@ -27,7 +28,9 @@ const ContactUsForm = () => {
                     <div className="sent-message">Your message has been sent. Thank you!</div>
                 </div>
                 <div className="text-center">
-                    <button type="submit">Enviar mensagem <i className="icon-whatsapp" /></button>
+                    <button type="submit">
+                        Enviar mensagem <WhatsappIcon height={16} style={{ height: '16px', marginBottom: '2px' }} />
+                    </button>
                 </div>
             </form>
         </div>

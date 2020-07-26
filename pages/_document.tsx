@@ -12,11 +12,12 @@ export default class ApplicationDocument extends Document {
         return (
             <Html lang="pt-BR">
                 <Head />
+                <link rel="preconnect" href="https://www.google-analytics.com" />
                 <script dangerouslySetInnerHTML={{ __html: googleAnalyticsSnippet }}></script>
-                <script async defer src='https://www.google-analytics.com/analytics.js'></script>
                 <body>
                     <Main />
                     <NextScript />
+                    <script async defer src='https://www.google-analytics.com/analytics.js'></script>
                 </body>
             </Html>
         );
