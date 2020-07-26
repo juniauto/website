@@ -50,6 +50,7 @@ const Footer = () => (
                             <div className="footer-head">
                                 <h4>Informação</h4>
                                 <span className="sr-only" itemProp="priceRange">$$</span>
+                                <span className="sr-only" itemProp="url">https://www.juniauto.com.br</span>
                                 <address itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                                     <span itemProp="streetAddress">Estr.Guandu do Sapê, 1395. Campo Grande. </span>
                                     <span itemProp="postalCode">23095-071</span>.&nbsp;
