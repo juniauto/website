@@ -49,6 +49,7 @@ const Footer = () => (
                         <div className="footer-content">
                             <div className="footer-head">
                                 <h4>Informação</h4>
+                                <span className="sr-only" itemProp="priceRange">$$</span>
                                 <address itemProp="address" itemScope itemType="http://schema.org/PostalAddress">
                                     <span itemProp="streetAddress">Estr.Guandu do Sapê, 1395. Campo Grande. </span>
                                     <span itemProp="postalCode">23095-071</span>.&nbsp;
@@ -70,22 +71,22 @@ const Footer = () => (
                                 <h4>Instagram</h4>
                                 <div className="flicker-img">
                                     <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
-                                        <img itemProp="photo" loading="lazy" height="100px" src="/assets/img/instagram/1.png" alt="Caminhão reboque plataforma carregando pickup em Bangu" />
+                                        <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/1.png" alt="Caminhão reboque plataforma carregando pickup em Bangu" />
                                     </a>
                                     <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
-                                        <img itemProp="photo" loading="lazy" height="100px" src="/assets/img/instagram/2.png" alt="Caminhão guincho plataforma transportando um Jeep no Rio de Janeiro" />
+                                        <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/2.png" alt="Caminhão guincho plataforma transportando um Jeep no Rio de Janeiro" />
                                     </a>
                                     <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
-                                        <img itemProp="photo" loading="lazy" height="100px" src="/assets/img/instagram/3.png" alt="Caminhão reboque transportando um carro em um dia de chuva" />
+                                        <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/3.png" alt="Caminhão reboque transportando um carro em um dia de chuva" />
                                     </a>
                                     <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
-                                        <img itemProp="photo" loading="lazy" height="100px" src="/assets/img/instagram/4.png" alt="Caminhão transportando um veículo de luxo do Recreio para a Barra da Tijuca" />
+                                        <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/4.png" alt="Caminhão transportando um veículo de luxo do Recreio para a Barra da Tijuca" />
                                     </a>
                                     <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
-                                        <img itemProp="photo" loading="lazy" height="100px" src="/assets/img/instagram/5.png" alt="Reboque de uma triton em Campo Grande, no Rio de Janeiro" />
+                                        <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/5.png" alt="Reboque de uma triton em Campo Grande, no Rio de Janeiro" />
                                     </a>
                                     <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
-                                        <img itemProp="photo" loading="lazy" height="100px" src="/assets/img/instagram/6.png" alt="Caminhão reboque transportando uma van em cima da plataforma" />
+                                        <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/6.png" alt="Caminhão reboque transportando uma van em cima da plataforma" />
                                     </a>
                                 </div>
                             </div>
