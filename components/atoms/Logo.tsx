@@ -5,7 +5,7 @@ interface LogoIconProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageEle
 };
 
 const LogoIcon = (props: LogoIconProps) => (
-    <img {...props}  src={require('../../public/assets/svg/logo.svg')} />
+    <img {...props} alt="Logo da Juniauto"  src={require('../../public/assets/svg/logo.svg')} />
 );
 
 export default LogoIcon;
