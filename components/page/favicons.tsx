@@ -3,9 +3,9 @@ import Head from 'next/head';
 
 const Favicons = () => (
     <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link href="/assets/img/favicon.png" rel="icon" />
-        <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+        <link href="/favicon.ico" rel="icon" />
+        <link href="/assets/icons/favicon_32.png" rel="icon" />
+        <link href="/assets/icons/favicon_180.png" rel="apple-touch-icon" />
     </Head>
 );
 
