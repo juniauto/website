@@ -1,5 +1,18 @@
 export const GA_TRACKING_ID = 'G-K85GPBC786'
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
+
+export const initialize = () => {
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() { window.dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', GA_TRACKING_ID);
+};
+
 // https://support.google.com/analytics/answer/9216061
 // Pageview is being collected through Enhanced measurement.
 
