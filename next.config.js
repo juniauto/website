@@ -11,5 +11,6 @@ module.exports = withPlugins([
 ], {
   images: {
     disableStaticImages: true,
-  }
+  },
+  productionBrowserSourceMaps: true,
 });
