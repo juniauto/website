@@ -3,7 +3,6 @@ import Favicons from './favicons';
 import Header from './header';
 import Footer from './footer';
 import Head from 'next/head';
-import Analytics from './analytics';
 
 const PageContainer = (props: Props<any>) => (
     <div className="page">
@@ -12,7 +11,6 @@ const PageContainer = (props: Props<any>) => (
         <meta name="google-site-verification" content="iTYthBEVOUkhuVONHqDzql8goKZujTE9uVSE5TBuT_E" />
       </Head>
 
-      <Analytics />
       <Favicons />
       <Header />
 

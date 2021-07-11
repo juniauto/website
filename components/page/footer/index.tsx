@@ -1,8 +1,11 @@
 import React from 'react';
+import { onFacebookPlusClick, onGooglePlusClick, onInstagramClick, onWhatsappClick } from '../../../lib/gtag';
 import LogoIcon from '../../atoms/Logo';
 import FacebookIcon from '../../icons/FacebookIcon';
 import GoogleIcon from '../../icons/GoogleIcon';
 import WhatsappIcon from '../../icons/WhatsappIcon';
+
+const onInstagramAvatarClick = () => onInstagramClick('insta image');
 
 const Footer = () => (
     <footer>
@@ -22,19 +25,19 @@ const Footer = () => (
                                 <div className="footer-icons">
                                     <ul>
                                         <li>
-                                            <a rel="nofollow noreferrer" target="_blank" href="https://fb.com/autosocorrojuniauto">
+                                            <a onClick={() => onFacebookPlusClick('footer')}  rel="nofollow noreferrer" target="_blank" href="https://fb.com/autosocorrojuniauto">
                                                 <span className="sr-only">curta nossa página no Facebook</span>
                                                 <FacebookIcon className="footer-icon" height={16} />
                                             </a>
                                         </li>
                                         <li>
-                                            <a rel="nofollow noreferrer" target="_blank" href="https://www.google.com/maps/place/Auto+Socorro+Juniauto+-+Reboque+e+S.O.S.+24+Horas/@-22.9393364,-43.6011208,11z/data=!4m5!3m4!1s0x0:0x88b29bf9cd4ca032!8m2!3d-22.9393364!4d-43.6011208">
+                                            <a onClick={() => onGooglePlusClick('footer')} rel="nofollow noreferrer" target="_blank" href="https://www.google.com/maps/place/Auto+Socorro+Juniauto+-+Reboque+e+S.O.S.+24+Horas/@-22.9393364,-43.6011208,11z/data=!4m5!3m4!1s0x0:0x88b29bf9cd4ca032!8m2!3d-22.9393364!4d-43.6011208">
                                                 <span className="sr-only">clique aqui para ver nossas avaliações no Google Maps</span>
                                                 <GoogleIcon className="footer-icon" height={16} />
                                             </a>
                                         </li>
                                         <li>
-                                            <a rel="nofollow noreferrer" target="_blank" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
+                                            <a onClick={() => onWhatsappClick('footer')} rel="nofollow noreferrer" target="_blank" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
                                                 <span className="sr-only">fale conosco no Whatsapp</span>
                                                 <WhatsappIcon className="footer-icon" height={16} />
                                             </a>
@@ -71,22 +74,22 @@ const Footer = () => (
                             <div className="footer-head">
                                 <h4>Instagram</h4>
                                 <div className="flicker-img">
-                                    <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
+                                    <a rel="nofollow noreferrer" onClick={onInstagramAvatarClick} target="_blank" href="https://www.instagram.com/juniauto24h">
                                         <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/1.png" alt="Caminhão reboque plataforma carregando pickup em Bangu" />
                                     </a>
-                                    <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
+                                    <a rel="nofollow noreferrer" onClick={onInstagramAvatarClick} target="_blank" href="https://www.instagram.com/juniauto24h">
                                         <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/2.png" alt="Caminhão guincho plataforma transportando um Jeep no Rio de Janeiro" />
                                     </a>
-                                    <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
+                                    <a rel="nofollow noreferrer" onClick={onInstagramAvatarClick} target="_blank" href="https://www.instagram.com/juniauto24h">
                                         <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/3.png" alt="Caminhão reboque transportando um carro em um dia de chuva" />
                                     </a>
-                                    <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
+                                    <a rel="nofollow noreferrer" onClick={onInstagramAvatarClick} target="_blank" href="https://www.instagram.com/juniauto24h">
                                         <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/4.png" alt="Caminhão transportando um veículo de luxo do Recreio para a Barra da Tijuca" />
                                     </a>
-                                    <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
+                                    <a rel="nofollow noreferrer" onClick={onInstagramAvatarClick} target="_blank" href="https://www.instagram.com/juniauto24h">
                                         <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/5.png" alt="Reboque de uma triton em Campo Grande, no Rio de Janeiro" />
                                     </a>
-                                    <a rel="nofollow noreferrer" target="_blank" href="https://www.instagram.com/juniauto24h">
+                                    <a rel="nofollow noreferrer" onClick={onInstagramAvatarClick} target="_blank" href="https://www.instagram.com/juniauto24h">
                                         <img itemProp="image" loading="lazy" height="100px" src="/assets/img/instagram/6.png" alt="Caminhão reboque transportando uma van em cima da plataforma" />
                                     </a>
                                 </div>

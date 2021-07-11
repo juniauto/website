@@ -524,10 +524,6 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
   position: relative;
 }
 
-.our-skill-area {
-  background: rgba(248, 248, 248, 0.8) url("../img/background/bg1.jpg") no-repeat fixed center top/cover;
-}
-
 .test-overly {
   background: rgba(0, 0, 0, 0.8);
   position: absolute;
@@ -544,7 +540,7 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 # Review
 --------------------------------------------------------------*/
 .reviews-area {
-  background: url(../img/background/bg1.jpg);
+  /* background: url(../../assets/img/background/bg1.jpg); */
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
@@ -875,11 +871,6 @@ input, select, textarea, input[type="text"], input[type="date"], input[type="url
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-.testimonials-area {
-  background: rgba(0, 0, 0, 0) url("../img/background/slider1.jpg") no-repeat fixed center top/cover;
-  height: auto;
-  width: 100%;
-}
 
 .testi-inner {
   position: relative;

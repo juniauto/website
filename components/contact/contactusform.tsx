@@ -1,17 +1,18 @@
 import React from 'react';
+import { onWhatsappClick } from '../../lib/gtag';
 import WhatsappIcon from '../icons/WhatsappIcon';
 
 const ContactUsForm = () => {
     return (
         <div className="form contact-form">
-            <form target="_blank" action="https://api.whatsapp.com/send" method="get" role="form" className="php-email-form">
+            <form target="_blank" action="https://api.whatsapp.com/send" method="get" role="form" className="php-email-form" onSubmit={() => onWhatsappClick('contact-form')}>
                 <input type="hidden" name="phone" value="5521982769969" />
                 <div className="form-group">
                     <input type="text" name="name" className="form-control" id="name" placeholder="Seu nome" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                     <div className="validate" />
                 </div>
                 <div className="form-group">
-                    <input type="email" className="form-control" name="email" id="email" placeholder="Seu veículo" data-rule="email" data-msg="Please enter a valid email" />
+                    <input type="text" className="form-control" name="plate" id="plate" placeholder="Seu veículo" data-rule="email" data-msg="Please enter a valid email" />
                     <div className="validate" />
                 </div>
                 <div className="form-group">

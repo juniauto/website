@@ -1,4 +1,5 @@
 import React, { useState, CSSProperties, useEffect } from 'react';
+import { onWhatsappClick } from '../../lib/gtag';
 import WhatsappIcon from '../icons/WhatsappIcon';
 
 const HeroPicture = () => {
@@ -51,7 +52,13 @@ const WoW = () => {
                         <h1 className="title2">Reboque para carros e motos em Campo Grande e região</h1>
                     </div>
                     <div className="layer-1-3 hidden-xs">
-                        <a rel="noreferrer" target="_blank" className="ready-btn right-btn page-scroll" href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es">
+                        <a
+                            onClick={() => onWhatsappClick('hero')}
+                            rel="noreferrer"
+                            target="_blank"
+                            className="ready-btn right-btn page-scroll"
+                            href="https://api.whatsapp.com/send?phone=5521982769969&text=Ol%C3%A1%2C%20vi%20o%20seu%20site%20e%20preciso%20de%20mais%20informa%C3%A7%C3%B5es"
+                        >
                             Entrar em contato <WhatsappIcon height={16} style={{ height: '16px', marginBottom: '2px' }} />
                         </a>
                     </div>

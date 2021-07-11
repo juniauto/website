@@ -8,4 +8,12 @@ module.exports = withPlugins([
 
   // your other plugins here
 
-]);
+], {
+  i18n: {
+    locales: ['pt-BR'],
+    defaultLocale: 'pt-BR',
+  },
+  images: {
+    disableStaticImages: true,
+  }
+});
