@@ -8,7 +8,7 @@ interface LazyIframeProps extends IframeProps {
     height: number;
 };
 
-const LazyIframe: React.FC = (props: LazyIframeProps) => {
+const LazyIframe: React.FC<LazyIframeProps> = (props) => {
     const Component = 'iframe';
     const LazyLoad = dynamic<IframeProps>(() => import('react-lazyload'), {
         ssr: false,
