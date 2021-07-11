@@ -5,8 +5,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
@@ -18,6 +16,6 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 Run lint and build steps:
 
-```
+```bash
 yarn run build
 ```
