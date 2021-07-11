@@ -1,19 +1,22 @@
 import React, { DetailedHTMLProps, IframeHTMLAttributes } from 'react';
 import dynamic from 'next/dynamic';
 
+type IframeProps = DetailedHTMLProps<IframeHTMLAttributes<HTMLIFrameElement>, HTMLIFrameElement>;
 
-interface LazyIframeProps extends DetailedHTMLProps<IframeHTMLAttributes<HTMLIFrameElement>, HTMLIFrameElement> {
+interface LazyIframeProps extends IframeProps {
     loading?: string;
     height: number;
 };
 
-export default function LazyIframe(props: LazyIframeProps) {
+const LazyIframe: React.FC = (props: LazyIframeProps) => {
     const Component = 'iframe';
-    const LazyLoad: any = dynamic(() => import('react-lazyload'), {
+    const LazyLoad = dynamic<IframeProps>(() => import('react-lazyload'), {
         ssr: false,
-        loading: () => <div style={{ height: props.height }} />
+        loading: function IframeEmpty () { return <div style={{ height: props.height }} />; }
     });
     return <LazyLoad  height={props.height}>
         <Component {...props} />
     </LazyLoad>;
-}
+};
+
+export default LazyIframe;

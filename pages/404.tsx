@@ -34,7 +34,7 @@ export default function ContactUsPage() {
 										<h4 className="sec-head">Página não encontrada</h4>
 
 										<p>
-											Essa página não existe, você pode <strong>voltar para a página inicial <Link href="/" passHref><a href="/">clicando aqui</a></Link></strong>.
+											Essa página não existe, você pode <strong>voltar para a página inicial <Link passHref href="/"><a>clicando aqui</a></Link></strong>.
 											Em caso de dúvida por favor nos mande uma mensagem.
                     </p>
 									</div>
