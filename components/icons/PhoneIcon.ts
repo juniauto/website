@@ -1,3 +1,3 @@
 import createIcon from './createIcon';
-
-export default createIcon(require('./phone.svg'));
+import phoneSVG from './phone.svg';
+export default createIcon(phoneSVG);

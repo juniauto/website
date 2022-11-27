@@ -1,12 +1,14 @@
-import React, { useState, CSSProperties, useEffect } from 'react';
+import Image from 'next/image';
+import React from 'react';
 import { onWhatsappClick } from '../../lib/gtag';
 import WhatsappIcon from '../icons/WhatsappIcon';
+import heroPic from '../../public/assets/img/slider/hero.webp';
 
 const HeroPicture = () => {
     const alternativeText = 'dois caminhões reboque transportando carros';
 
     return (
-        <picture className="background">
+        <div className="background">
             <style jsx>{`
                 .background {
                     height: 100%;
@@ -24,15 +26,12 @@ const HeroPicture = () => {
 
                 @media (min-width: 1024px) {
                     .background .image {
-                       filter: none;
+                        filter: none;
                     }
                 }
             `}</style>
-            <source media="(min-width:1024px)" srcSet={require('../../public/assets/img/slider/01_1749w.png?webp')} type="image/webp" />
-            <source media="(min-width:1024px)" srcSet={require('../../public/assets/img/slider/01_1749w.png')} type="image/png" />
-            <source srcSet={require('../../public/assets/img/slider/01_0360w.png?webp')} type="image/webp" />
-            <img className="image" alt={alternativeText} src={require('../../public/assets/img/slider/01_1749w.png')} />
-        </picture>
+            <img className="image" alt={alternativeText} src={heroPic.src} />
+        </div>
     )
 };
 
@@ -71,6 +70,7 @@ const WoW = () => {
                     position:relative;
                     min-height:50vh;
                     overflow: hidden;
+                    background-color: #000;
                 }
                 .bJkZLT {
                     position:absolute;
