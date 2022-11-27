@@ -1,3 +1,3 @@
 import createIcon from './createIcon';
-
-export default createIcon(require('./motorcycle.svg'));
+import motorcycleSVG from './motorcycle.svg';
+export default createIcon(motorcycleSVG);

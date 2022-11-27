@@ -2,10 +2,7 @@ import React from 'react';
 import Head from 'next/head'
 
 import PageContainer from '../components/page/container';
-import ContactUsForm from '../components/contact/contactusform';
-import LazyIframe from '../components/LazyIframe';
 import Whatsapp from '../components/contact/whatsappsection';
-import ContactUs from '../components/contact/contactus';
 import ContactSection from '../components/contact/contactsection';
 
 export default function ContactUsPage() {

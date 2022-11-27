@@ -1,3 +1,4 @@
 import createIcon from './createIcon';
+import whatsappSVG from './whatsapp.svg';
 
-export default createIcon(require('./whatsapp.svg'));
+export default createIcon(whatsappSVG);

@@ -4,7 +4,11 @@ interface IconProps extends DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement
     height: number;
 };
 
-const createIcon = (src: string): React.FC<IconProps> => function Icon(props) {
+interface createIconProps {
+    src: string;
+};
+
+const createIcon = ({ src }: createIconProps): React.FC<IconProps> => function Icon(props) {
     return <img {...props} src={src} />
 };
 
