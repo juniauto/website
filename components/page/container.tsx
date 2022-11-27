@@ -1,10 +1,10 @@
-import React, { Props } from 'react';
+import React from 'react';
 import Favicons from './favicons';
 import Header from './header';
 import Footer from './footer';
 import Head from 'next/head';
 
-const PageContainer = (props: Props<any>) => (
+const PageContainer: React.FC<React.PropsWithChildren<{}>> = (props) => (
     <div className="page">
       <Head>
         <meta name="description" content="Reboque para carros e motos em Campo Grande e região. Atendimento 24 horas rápido e de qualidade para o momento que você mais precisa." />

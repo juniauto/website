@@ -3,14 +3,15 @@ export const GA_TRACKING_ID = 'G-K85GPBC786'
 declare global {
   interface Window {
     dataLayer: any[];
+    gtag: Function;
   }
 }
 
 export const initialize = () => {
   window.dataLayer = window.dataLayer || [];
   window.gtag = function gtag() { window.dataLayer.push(arguments); }
-  gtag('js', new Date());
-  gtag('config', GA_TRACKING_ID);
+  window.gtag('js', new Date());
+  window.gtag('config', GA_TRACKING_ID);
 };
 
 // https://support.google.com/analytics/answer/9216061
@@ -18,7 +19,7 @@ export const initialize = () => {
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
 const triggerConversionEvent = (type: string, where: string) => {
-  gtag('event', 'generate_lead', {
+  window.gtag('event', 'generate_lead', {
     'event_category': 'engagement',
     'event_label': `${type}-${where}`,
   });
