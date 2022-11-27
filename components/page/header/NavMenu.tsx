@@ -19,11 +19,11 @@ const NaveMenuItem = (props: NaveMenuItemProps) => {
 
     return (
         <li className={className}>
-            <Link passHref href={props.href}>
-                <a rel={props.rel} className="nav-link">{props.title}</a>
+            <Link passHref href={props.href} rel={props.rel} className="nav-link">
+                {props.title}
             </Link>
         </li>
-    )
+    );
 };
 
 interface NavMenuProps extends WithRouterProps {}
@@ -35,11 +35,11 @@ const NavMenu = (props: NavMenuProps) => {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light">
-            <Link href="/" passHref>
-                <a className="navbar-brand juniauto-logo">
-                    <span className="sr-only">JUNIAUTO</span>
-                    <LogoIcon height={48} />
-                </a>
+            <Link href="/" passHref className="navbar-brand juniauto-logo">
+
+                <span className="sr-only">JUNIAUTO</span>
+                <LogoIcon height={48} />
+
             </Link>
             <button className="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Expandir navegação" onClick={toggle}>
                 <span className="navbar-toggler-icon" />
@@ -54,7 +54,7 @@ const NavMenu = (props: NavMenuProps) => {
                 </ul>
             </div>
         </nav>
-    )
+    );
 };
 
 export default withRouter(NavMenu);

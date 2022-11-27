@@ -1,3 +1,4 @@
 import createIcon from './createIcon';
+import facebookSVG from './facebook.svg';
 
-export default createIcon(require('./facebook.svg'));
+export default createIcon(facebookSVG);

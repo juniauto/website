@@ -1,3 +1,4 @@
 import createIcon from './createIcon';
+import localShippingSVG from './local_shipping.svg';
 
-export default createIcon(require('./local_shipping.svg'));
+export default createIcon(localShippingSVG);
