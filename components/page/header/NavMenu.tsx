@@ -9,6 +9,7 @@ interface NaveMenuItemProps {
     title: string;
     href: string;
     activeRoute: string;
+    rel?: string;
 }
 
 const NaveMenuItem = (props: NaveMenuItemProps) => {
@@ -19,7 +20,7 @@ const NaveMenuItem = (props: NaveMenuItemProps) => {
     return (
         <li className={className}>
             <Link passHref href={props.href}>
-                <a className="nav-link">{props.title}</a>
+                <a rel={props.rel} className="nav-link">{props.title}</a>
             </Link>
         </li>
     )
@@ -47,7 +48,7 @@ const NavMenu = (props: NavMenuProps) => {
                 <ul className="navbar-nav ml-auto">
                     <NaveMenuItem activeRoute={activeRoute} href="/" title="Página Inicial" />
                     <NaveMenuItem activeRoute={activeRoute} href="/servicos" title="Serviços" />
-                    <NaveMenuItem activeRoute={activeRoute} href="/login" title="Login" />
+                    <NaveMenuItem activeRoute={activeRoute} href="/login" title="Login" rel="nofollow" />
                     <NaveMenuItem activeRoute={activeRoute} href="/localizacao" title="Localização" />
                     <NaveMenuItem activeRoute={activeRoute} href="/contato" title="Fale Conosco" />
                 </ul>
