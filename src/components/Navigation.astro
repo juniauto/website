@@ -1,0 +1,30 @@
+---
+interface Props {
+  zapLink?: string;
+}
+
+const { 
+  zapLink = "https://wa.me/5521982769969?text=Ol%C3%A1%2C%20preciso%20de%20um%20reboque%20em%20Campo%20Grande." 
+} = Astro.props;
+---
+
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5 py-4">
+  <div class="container mx-auto px-4 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <span class="text-[#ffd600] font-black text-2xl tracking-tighter">JUNIAUTO</span>
+    </a>
+    
+    <div class="hidden md:flex items-center gap-8 text-sm font-bold uppercase tracking-wider text-gray-400">
+      <a href="/#about" class="hover:text-[#ffd600] transition-colors">Sobre</a>
+      <a href="/#services" class="hover:text-[#ffd600] transition-colors">Serviços</a>
+      <a href="/#contact" class="hover:text-[#ffd600] transition-colors">Contato</a>
+    </div>
+
+    <a
+      href={zapLink}
+      class="bg-[#ffd600] text-black font-black py-3 px-6 rounded-full text-xs uppercase tracking-tight hover:brightness-110 active:scale-95 transition-all shadow-lg"
+    >
+      Socorro 24h
+    </a>
+  </div>
+</nav>

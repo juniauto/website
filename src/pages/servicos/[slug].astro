@@ -1,0 +1,133 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Hero from '../../components/Hero.astro';
+import RichFAQ from '../../components/RichFAQ.astro';
+import WhatsappSection from '../../components/WhatsappSection.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const serviceEntries = await getCollection('services');
+  return serviceEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": entry.data.schemaType,
+  "name": entry.data.title,
+  "description": entry.data.description,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Juniauto Guincho",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Campo Grande",
+      "addressRegion": "RJ"
+    }
+  }
+};
+
+const ctaMessage = `Olá, preciso de ajuda com ${entry.data.shortTitle} em Campo Grande.`;
+const ctaLink = `https://wa.me/5521982769969?text=${encodeURIComponent(ctaMessage)}`;
+const ctaText = entry.slug === 'carga-de-bateria' ? "Solicitar Socorro de Bateria" : "Solicitar Resgate Agora";
+
+const getBenefitIconPath = (text: string) => {
+  const t = text.toLowerCase();
+  
+  // Cintas/Segurança -> Knot/Shield
+  if (t.includes('cintas') || t.includes('segurança') || t.includes('fixação')) 
+    return 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z';
+    
+  // Plataforma/Guincho -> Truck/Flatbed
+  if (t.includes('plataforma') || t.includes('guincho') || t.includes('reboque')) 
+    return 'M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z M13 16v-5h6l2 2v3h-8z M4 9h7v7H4V9z M1 11h3v5H1v-5z';
+    
+  // Local/Base -> Map Pin
+  if (t.includes('base') || t.includes('local') || t.includes('campo grande')) 
+    return 'M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z';
+    
+  // Pagamento -> Credit Card
+  if (t.includes('pix') || t.includes('cartão') || t.includes('pagamento')) 
+    return 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z';
+    
+  // Bateria -> Battery
+  if (t.includes('bateria') || t.includes('elétrica')) 
+    return 'M13 10V3L4 14h7v7l9-11h-7z';
+    
+  // Pneu/Mecânica -> Wrench
+  if (t.includes('pneu') || t.includes('troca') || t.includes('mecânica')) 
+    return 'M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z';
+    
+  // 24h -> Clock
+  if (t.includes('24') || t.includes('10+')) 
+    return 'M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z';
+    
+  // Default Shield
+  return 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z';
+};
+---
+
+<Layout title={entry.data.title} description={entry.data.description} zapLink={ctaLink}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  
+  <Navigation zapLink={ctaLink} />
+  
+  <main class="pt-20">
+    <Hero 
+      title1={entry.data.shortTitle}
+      title2={entry.data.h1}
+      description={entry.data.description}
+      ctaText={ctaText}
+      ctaLink={ctaLink}
+    />
+    
+    <section class="content-section py-12 bg-[#0a0a0a]">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="prose prose-invert prose-xl prose-yellow mx-auto">
+          <Content />
+        </div>
+        
+        {entry.data.benefits && (
+          <div class="benefits-grid grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+            {entry.data.benefits.map((benefit) => (
+              <div class="benefit-tag glass-card p-6 text-center border-[#ffd600]/10 hover:border-[#ffd600]/30 transition-colors">
+                <div class="text-[#ffd600] flex justify-center mb-4 filter drop-shadow-lg">
+                  <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24"><path d={getBenefitIconPath(benefit)}></path></svg>
+                </div>
+                <span class="text-white font-bold text-lg">{benefit}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </section>
+
+    <RichFAQ customFaqs={entry.data.faq} />
+    
+    <WhatsappSection zapLink={ctaLink} />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Override prose styles to match design */
+  .prose {
+    color: #d4d4d4; /* gray-300 equivalent for better readability */
+    font-size: 1.125rem; /* 18px */
+    line-height: 1.8;
+  }
+  .prose h1, .prose h2, .prose h3 {
+    color: #fff;
+    font-weight: 800;
+  }
+  .prose strong {
+    color: #ffd600;
+  }
+</style>

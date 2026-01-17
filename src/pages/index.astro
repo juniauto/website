@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Hero from '../components/Hero.astro';
+import AboutUs from '../components/AboutUs.astro';
+import OurServices from '../components/OurServices.astro';
+import RichFAQ from '../components/RichFAQ.astro';
+import WhatsappSection from '../components/WhatsappSection.astro';
+import ContactSection from '../components/ContactSection.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Guincho em Campo Grande RJ 24h | Chegamos Rápido - Juniauto";
+const description = "Precisa de reboque em Campo Grande? A Juniauto é líder em agilidade com base local. Atendimento 24h para carros e motos. Preço justo e resgate imediato.";
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <main class="pt-20">
+    <Hero />
+    
+    <AboutUs>
+      <p>
+        Fundada para ser a referência em auto socorro em <strong>Campo Grande</strong>, a Juniauto é a escolha nº 1 em agilidade para motoristas da Zona Oeste.
+      </p>
+      <p>
+        Nossa frota está estrategicamente posicionada próxima ao <strong>West Shopping</strong>, <strong>Estrada do Mendanha</strong> e <strong>Viaduto de Campo Grande</strong>, garantindo resgate em minutos.
+      </p>
+    </AboutUs>
+
+    <OurServices />
+    
+    <RichFAQ />
+    
+    <WhatsappSection />
+    
+    <ContactSection />
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* Page specific transitions or overrides */
+</style>

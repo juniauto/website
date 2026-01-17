@@ -1,0 +1,71 @@
+{
+  "$ref": "#/definitions/services",
+  "definitions": {
+    "services": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "shortTitle": {
+          "type": "string"
+        },
+        "h1": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "icon": {
+          "type": "string"
+        },
+        "schemaType": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "benefits": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "faq": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "question": {
+                "type": "string"
+              },
+              "answer": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "question",
+              "answer"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "shortTitle",
+        "h1",
+        "description",
+        "icon",
+        "schemaType",
+        "keywords",
+        "faq"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

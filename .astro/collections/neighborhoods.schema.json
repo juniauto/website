@@ -1,0 +1,39 @@
+{
+  "$ref": "#/definitions/neighborhoods",
+  "definitions": {
+    "neighborhoods": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "h1": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "keywords": {
+          "type": "string"
+        },
+        "landmark": {
+          "type": "string"
+        },
+        "top_priority": {
+          "type": "boolean"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "h1",
+        "description",
+        "keywords"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

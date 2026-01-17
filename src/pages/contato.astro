@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import ContactSection from '../components/ContactSection.astro';
+import WhatsappSection from '../components/WhatsappSection.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Contato | Juniauto Guincho 24h Campo Grande";
+const description = "Entre em contato com a Juniauto. Atendimento emergencial 24h para reboque e auto socorro em Campo Grande e Zona Oeste do Rio.";
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <main class="pt-32">
+    <div class="container mx-auto px-4 text-center mb-16">
+      <h1 class="text-white text-5xl md:text-7xl font-black mb-6">Fale Conosco</h1>
+      <p class="text-gray-400 text-xl">Estamos prontos para te atender a qualquer hora do dia ou da noite.</p>
+    </div>
+
+    <ContactSection />
+    
+    <WhatsappSection />
+  </main>
+
+  <Footer />
+</Layout>

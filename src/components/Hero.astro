@@ -1,0 +1,83 @@
+---
+interface Props {
+  title1?: string;
+  title2?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+}
+
+const { 
+  title1 = "Auto Socorro e Guincho 24h", 
+  title2 = "Precisa de Reboque em Campo Grande?", 
+  description,
+  ctaText = "Solicitar Guincho Agora",
+  ctaLink = "https://wa.me/5521982769969?text=Ol%C3%A1%2C%20preciso%20de%20um%20reboque%20em%20Campo%20Grande."
+} = Astro.props;
+---
+
+<div class="hero-section relative py-16 md:py-24 overflow-hidden bg-[#0a0a0a]">
+  <!-- Background Pattern (Subtle) -->
+  <div class="absolute inset-0 opacity-10 pointer-events-none bg-[url('/assets/img/hero-pattern.svg')] bg-cover"></div>
+  
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="max-w-3xl">
+      <h2 class="title1 text-gradient text-xl md:text-2xl font-bold mb-2 uppercase tracking-wider">
+        {title1}
+      </h2>
+      <h1 class="title2 text-4xl md:text-7xl font-extrabold text-white leading-tight mb-8">
+        {title2}
+      </h1>
+      
+      <div class="hero-description text-gray-400 text-lg md:text-xl leading-relaxed mb-10">
+        {description ? (
+          <p>{description}</p>
+        ) : (
+          <ul class="hero-list space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="text-[#ffd600] flex-shrink-0">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path></svg>
+              </span> 
+              <span>Resgate ágil no West Shopping, Mendanha ou Av. Brasil</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-[#ffd600] flex-shrink-0">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"></path></svg>
+              </span> 
+              <span>Aceitamos Pix, Crédito e Débito sem surpresas</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-[#ffd600] flex-shrink-0">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
+              </span> 
+              <span>Base local em Campo Grande (Não somos de SP)</span>
+            </li>
+          </ul>
+        )}
+      </div>
+
+      <div class="hero-actions flex flex-wrap gap-4">
+        <a
+          href={ctaLink}
+          class="bg-[#ffd600] text-black font-black py-4 px-8 rounded-full text-lg uppercase tracking-tight hover:scale-105 active:scale-95 transition-transform flex items-center gap-2"
+        >
+          {ctaText}
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .hero-section {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(90deg, #fff 0%, #ffd600 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

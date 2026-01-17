@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background-deep: #0a0a0a;
+    --accent-yellow: #ffd600;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --font-main: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--background-deep);
+    color: var(--text-primary);
+    font-family: var(--font-main);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #fff 0%, #ffd600 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+}

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import OurServices from '../components/OurServices.astro';
+import WhatsappSection from '../components/WhatsappSection.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Serviços de Reboque e Guincho | Juniauto Campo Grande";
+const description = "Conheça nossa linha completa de auto socorro: reboque de carros, motos, caminhões, carga de bateria e auxílio mecânico 24h em Campo Grande.";
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <main class="pt-32 pb-20">
+    <div class="container mx-auto px-4 text-center mb-16">
+      <h1 class="text-white text-5xl md:text-7xl font-black mb-6">Nossos Serviços</h1>
+      <p class="text-gray-400 text-xl max-w-2xl mx-auto">Soluções completas de transporte e resgate com a confiança da Juniauto.</p>
+    </div>
+
+    <OurServices />
+    
+    <WhatsappSection />
+  </main>
+
+  <Footer />
+</Layout>

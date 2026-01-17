@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Termos de Uso | Juniauto Guincho 24h";
+const description = "Termos e Condições de Uso dos serviços da Juniauto. Regras para solicitação de reboque e pagamentos.";
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <main class="pt-32 pb-20 bg-[#0a0a0a]">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-white text-4xl md:text-5xl font-black mb-10">Termos de Uso</h1>
+      
+      <div class="prose prose-invert prose-lg text-gray-400">
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">1. Visão Geral</h2>
+        <p>Ao solicitar um serviço da <strong>Juniauto</strong>, você concorda com os termos descritos abaixo. Nossos serviços incluem reboque, carga de bateria, troca de pneus e destombamento em Campo Grande e regiões adjacentes.</p>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">2. Solicitação de Serviço</h2>
+        <p>O tempo de chegada informado (geralmente 20-40 min) é uma estimativa baseada em condições normais de trânsito. Situações de força maior, chuvas intensas ou trânsito atípico podem alterar este prazo.</p>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">3. Pagamentos</h2>
+        <p>O pagamento deve ser realizado ao final do serviço, diretamente ao motorista ou via transferência imediata.</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li>Aceitamos: Pix, Dinheiro, Cartão de Crédito e Débito.</li>
+          <li>Não aceitamos cheques ou pagamentos a prazo, salvo contrato empresarial prévio.</li>
+        </ul>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">4. Responsabilidades</h2>
+        <p>A Juniauto se responsabiliza pela integridade do veículo durante o transporte (do momento do içamento até o descarregamento). Objetos pessoais deixados no interior do veículo são de responsabilidade do proprietário.</p>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">5. Cancelamento</h2>
+        <p>Cancelamentos após o deslocamento do guincho podem estar sujeitos a uma taxa de deslocamento (saída de base).</p>
+
+        <p class="mt-10 text-sm italic">Última atualização: Janeiro de 2026.</p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

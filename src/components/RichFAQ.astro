@@ -1,0 +1,61 @@
+---
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  customFaqs?: FAQItem[];
+}
+
+const { customFaqs } = Astro.props;
+
+const defaultFaqs: FAQItem[] = [
+  {
+    question: "Qual o tempo de chegada em Campo Grande?",
+    answer: "Nossa base é local. Chegamos na maioria dos pontos de Campo Grande e proximidades em 20 a 40 minutos."
+  },
+  {
+    question: "Atendem 24 horas?",
+    answer: "Sim, operamos em regime de plantão 24h, inclusive sábados, domingos e feriados."
+  },
+  {
+    question: "Quais veículos vocês rebocam?",
+    answer: "Rebocamos carros de passeio, SUVs, utilitários leve, motos e máquinas de pequeno porte."
+  },
+  {
+    question: "Aceitam cartão e Pix?",
+    answer: "Sim, aceitamos Pix, Crédito e Débito diretamente com o motorista no local."
+  }
+];
+
+const faqs = customFaqs && customFaqs.length > 0 ? customFaqs : defaultFaqs;
+---
+
+<section class="faq-section py-20 bg-[#0a0a0a]">
+  <div class="container mx-auto px-4">
+    <div class="section-header text-center mb-16">
+      <h2 class="text-gradient text-4xl md:text-5xl font-extrabold mb-4">Dúvidas Frequentes</h2>
+      <p class="text-gray-400 text-lg">Tudo o que você precisa saber antes de chamar seu resgate.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {faqs.map((faq) => (
+        <div class="faq-card glass-card p-8">
+          <h3 class="text-[#ffd600] text-xl font-bold mb-4 flex items-start gap-3">
+            <svg class="w-6 h-6 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            {faq.question}
+          </h3>
+          <p class="text-gray-300 leading-relaxed text-lg pl-9">{faq.answer}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #fff 0%, #ffd600 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>

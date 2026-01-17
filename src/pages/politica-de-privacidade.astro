@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Política de Privacidade | Juniauto Guincho 24h";
+const description = "Política de Privacidade e Proteção de Dados da Juniauto. Saiba como tratamos suas informações conforme a LGPD.";
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <main class="pt-32 pb-20 bg-[#0a0a0a]">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h1 class="text-white text-4xl md:text-5xl font-black mb-10">Política de Privacidade</h1>
+      
+      <div class="prose prose-invert prose-lg text-gray-400">
+        <p>A <strong>Juniauto</strong> valoriza a privacidade de seus usuários e está comprometida em proteger seus dados pessoais. Esta política descreve como coletamos, usamos e protegemos suas informações ao utilizar nossos serviços de guincho e auto socorro.</p>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">1. Coleta de Informações</h2>
+        <p>Coletamos informações mínimas necessárias para a prestação do serviço de reboque, tais como:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li>Localização do veículo para envio do resgate.</li>
+          <li>Número de telefone para contato via WhatsApp ou ligação.</li>
+          <li>Modelo do veículo e tipo de pane.</li>
+        </ul>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">2. Uso das Informações</h2>
+        <p>Os dados coletados são utilizados exclusivamente para:</p>
+        <ul class="list-disc pl-6 space-y-2 mb-6">
+          <li>Operacionalizar o atendimento de emergência.</li>
+          <li>Comunicar previsão de chegada e orçamento.</li>
+          <li>Emitir recibos ou comprovantes de pagamento.</li>
+        </ul>
+        <p>Nós <strong>não</strong> vendemos, alugamos ou compartilhamos seus dados com terceiros para fins de marketing.</p>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">3. WhatsApp e Geolocalização</h2>
+        <p>Ao clicar nos botões de "Chamar no WhatsApp", você será redirecionado para o aplicativo de terceiros. A Juniauto não tem controle sobre as políticas de privacidade do WhatsApp/Meta, mas utiliza a plataforma apenas como ferramenta de comunicação direta.</p>
+
+        <h2 class="text-white font-bold text-2xl mt-8 mb-4">4. Cookies</h2>
+        <p>Este site utiliza cookies essenciais para funcionamento e análise de tráfego anônima para melhorar a experiência do usuário.</p>
+
+        <p class="mt-10 text-sm italic">Última atualização: Janeiro de 2026.</p>
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Hero from '../../components/Hero.astro';
+import AboutUs from '../../components/AboutUs.astro';
+import RichFAQ from '../../components/RichFAQ.astro';
+import WhatsappSection from '../../components/WhatsappSection.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const neighborhoodEntries = await getCollection('neighborhoods');
+  return neighborhoodEntries.map(entry => ({
+    params: { slug: entry.slug }, props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": `Juniauto Reboque em ${entry.data.name}`,
+  "description": entry.data.description,
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": entry.data.name
+  }
+};
+
+const ctaMessage = `Olá, preciso de um reboque em ${entry.data.name}.`;
+const ctaLink = `https://wa.me/5521982769969?text=${encodeURIComponent(ctaMessage)}`;
+---
+
+<Layout title={`${entry.data.h1} | Juniauto 24h`} description={entry.data.description} zapLink={ctaLink}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  
+  <Navigation zapLink={ctaLink} />
+  
+  <main class="pt-20">
+    <Hero 
+      title1={`Reboque em ${entry.data.name}`}
+      title2={entry.data.h1}
+      description={entry.data.description}
+      ctaLink={ctaLink}
+    />
+    
+    <AboutUs title={`Atendimento em ${entry.data.name}`} subtitle={`O salvador local de ${entry.data.name}`}>
+       <Content />
+    </AboutUs>
+
+    <RichFAQ />
+    
+    <WhatsappSection zapLink={ctaLink} />
+    
+    <ContactSection />
+  </main>
+
+  <Footer />
+</Layout>

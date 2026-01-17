@@ -1,0 +1,70 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+
+const { 
+  title = "Sobre a Juniauto", 
+  subtitle = "Liderança em Reboque na Zona Oeste" 
+} = Astro.props;
+---
+
+<section id="about" class="about-section py-20 bg-[#0a0a0a]">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="w-full md:w-1/2">
+        <div class="about-text">
+          <h2 class="text-gradient text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+            {title}
+          </h2>
+          <h3 class="text-[#ffd600] text-xl font-semibold mb-8 uppercase tracking-wide">
+            {subtitle}
+          </h3>
+          
+          <div class="content-wrapper text-gray-400 text-lg leading-relaxed space-y-6">
+            <slot />
+          </div>
+
+          <div class="about-highlights mt-12 space-y-6">
+            <div class="highlight-item flex gap-4">
+              <div class="text-[#ffd600] mt-1">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <strong class="text-white block text-lg mb-1">Especialistas Locais</strong>
+                <p class="text-gray-400">Conhecemos cada rua de Campo Grande, garantindo que o resgate chegue pelo caminho mais rápido.</p>
+              </div>
+            </div>
+            <div class="highlight-item flex gap-4">
+              <div class="text-[#ffd600] mt-1">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+              </div>
+              <div>
+                <strong class="text-white block text-lg mb-1">Cobertura Estratégica</strong>
+                <p class="text-gray-400">Atendimento prioritário na Av. Brasil e principais acessos do bairro.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="w-full md:w-1/2">
+        <div class="about-image-wrapper glass-card relative h-[450px] overflow-visible rounded-2xl bg-cover bg-center" style="background-image: url('/assets/img/slider/redesign_hero.png');">
+           <div class="stats-overlay absolute -bottom-6 -left-6 bg-[#ffd600] p-8 rounded-xl shadow-2xl flex flex-col items-center">
+             <span class="stats-num text-4xl font-black text-black leading-none">10+</span>
+             <span class="stats-label text-black text-xs font-black uppercase tracking-tighter mt-1 text-center">Anos de Experiência</span>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(90deg, #fff 0%, #ffd600 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style>
