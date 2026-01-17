@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+
+const title = "Página não encontrada | Juniauto";
+const description = "Parece que você saiu da rota. Volte para a Juniauto e encontre o serviço de guincho ideal para você.";
+---
+
+<Layout title={title} description={description}>
+  <Navigation />
+  
+  <main class="min-h-screen pt-32 pb-20 flex flex-col items-center justify-center text-center px-4">
+    <div class="mb-8 p-6 bg-brand-yellow/10 rounded-full">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-24 h-24 text-brand-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"></circle>
+        <path d="M16 16s-1.5-2-4-2-4 2-4 2"></path>
+        <line x1="9" y1="9" x2="9.01" y2="9"></line>
+        <line x1="15" y1="9" x2="15.01" y2="9"></line>
+      </svg>
+    </div>
+    
+    <h1 class="text-4xl md:text-5xl font-bold font-header text-gray-900 mb-4">
+      Eita! Saiu da rota?
+    </h1>
+    
+    <p class="text-xl text-gray-600 max-w-lg mb-10">
+      Não encontramos a página que você procurava. Mas não se preocupe, a <span class="font-bold text-brand-yellow">Juniauto</span> te coloca de volta no caminho certo.
+    </p>
+    
+    <a 
+      href="/" 
+      class="inline-flex items-center gap-2 bg-brand-yellow text-brand-black px-8 py-4 rounded-lg font-bold hover:bg-yellow-400 transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+      </svg>
+      Voltar para o Início
+    </a>
+  </main>
+
+  <Footer />
+</Layout>
