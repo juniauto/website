@@ -24,11 +24,8 @@ const { title, description = "Juniauto - Guincho e Reboque 24h em Campo Grande R
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K85GPBC786"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
-      console.log('LAYOUT DEBUG: dataLayer exists?', !!window.dataLayer);
-      console.log('LAYOUT DEBUG: push is spy?', window.dataLayer.push.toString().includes('SPY'));
       
       function gtag() {
-        console.log('LAYOUT DEBUG: gtag called');
         window.dataLayer.push(arguments);
       }
       window.gtag = gtag; // Explicitly expose
