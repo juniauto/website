@@ -1,21 +1,102 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Here you can see the content behind the [juniauto.com.br](https://www.juniauto.com.br) website.
+# Juniauto Website
 
-## Development
+This is the official website for Juniauto, a towing and auto rescue service in Campo Grande, RJ. The project is built with [Astro](https://astro.build), [React](https://reactjs.org), and [Tailwind CSS](https://tailwindcss.com).
 
-First, run the development server:
+## 🚀 Tech Stack
+
+- **Framework:** [Astro](https://astro.build)
+- **UI Library:** [React](https://reactjs.org)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **Testing:** [Playwright](https://playwright.dev)
+- **Quality/Audit:** Lighthouse & Custom Scripts
+
+## 🛠️ Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm (Node Package Manager)
+
+## 📦 Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd website
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+## 💻 Development
+
+Start the local development server:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site will be available at `http://localhost:4321`.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🏗️ Build & Preview
 
-## Testing
-
-Run lint and build steps:
+To build the project for production:
 
 ```bash
-yarn run build
+npm run build
 ```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 🔍 Quality Assurance
+
+This project includes scripts for performance and quality auditing using Lighthouse.
+
+- **Run Lighthouse Audit:**
+  ```bash
+  npm run quality:audit
+  ```
+  Runs a Lighthouse audit on the configured pages.
+
+- **Analyze Report:**
+  ```bash
+  npm run quality:analyze
+  ```
+  Analyzes the generated `lighthouse-report.json`.
+
+- **Check Console Errors:**
+  ```bash
+  npm run quality:console
+  ```
+  Checks for console errors during the audit process.
+
+## 📁 Project Structure
+
+```text
+/
+├── public/           # Static assets
+├── scripts/          # Quality assurance and utility scripts
+├── src/
+│   ├── components/   # Reusable UI components (Astro/React)
+│   ├── layouts/      # Page layouts
+│   ├── pages/        # File-based routing
+│   └── styles/       # Global styles
+├── package.json      # Project dependencies and scripts
+└── astro.config.mjs  # Astro configuration
+```
+
+## 🧪 Testing
+
+Run end-to-end tests with Playwright:
+
+```bash
+npx playwright test
+```
+
+## 📄 License
+
+[MIT](LICENSE)
