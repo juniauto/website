@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import heroBg from '../assets/hero-bg.png';
+
 interface Props {
   title1?: string;
   title2?: string;
@@ -16,20 +19,29 @@ const {
 } = Astro.props;
 ---
 
-<div class="hero-section relative py-16 md:py-24 overflow-hidden bg-[#0a0a0a]">
-  <!-- Background Pattern (Subtle) -->
-  <div class="absolute inset-0 opacity-10 pointer-events-none bg-[url('/assets/img/hero-pattern.svg')] bg-cover"></div>
+<div class="hero-section relative py-20 md:py-32 overflow-hidden">
+  <!-- Background Image with Overlay -->
+  <div class="absolute inset-0 z-0">
+    <Image 
+      src={heroBg} 
+      alt="Guincho Juniauto no Rio de Janeiro" 
+      class="w-full h-full object-cover"
+      quality="mid"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-transparent"></div>
+  </div>
   
   <div class="container mx-auto px-4 relative z-10">
     <div class="max-w-3xl">
-      <h2 class="title1 text-gradient text-xl md:text-2xl font-bold mb-2 uppercase tracking-wider">
+      <span class="title1 block text-gradient text-xl md:text-2xl font-bold mb-2 uppercase tracking-wider">
         {title1}
-      </h2>
+      </span>
       <h1 class="title2 text-4xl md:text-7xl font-extrabold text-white leading-tight mb-8">
         {title2}
       </h1>
       
-      <div class="hero-description text-gray-400 text-lg md:text-xl leading-relaxed mb-10">
+      <div class="hero-description text-gray-100 drop-shadow-md font-medium text-lg md:text-xl leading-relaxed mb-10">
         {description ? (
           <p>{description}</p>
         ) : (

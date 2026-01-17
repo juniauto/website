@@ -1,4 +1,7 @@
 ---
+import { Image } from 'astro:assets';
+import heroBg from '../assets/hero-bg.png';
+
 interface Props {
   title?: string;
   subtitle?: string;
@@ -49,12 +52,15 @@ const {
         </div>
       </div>
       
-      <div class="w-full md:w-1/2">
-        <div class="about-image-wrapper glass-card relative h-[450px] overflow-visible rounded-2xl bg-cover bg-center" style="background-image: url('/assets/img/slider/redesign_hero.png');">
-           <div class="stats-overlay absolute -bottom-6 -left-6 bg-[#ffd600] p-8 rounded-xl shadow-2xl flex flex-col items-center">
-             <span class="stats-num text-4xl font-black text-black leading-none">10+</span>
-             <span class="stats-label text-black text-xs font-black uppercase tracking-tighter mt-1 text-center">Anos de Experiência</span>
-           </div>
+      <div class="w-full md:w-1/2 relative">
+        <Image 
+          src={heroBg} 
+          alt="Frota Juniauto em Campo Grande" 
+          class="w-full h-auto rounded-2xl shadow-2xl border border-white/10"
+        />
+        <div class="stats-overlay absolute -bottom-6 -left-6 bg-[#ffd600] p-8 rounded-xl shadow-2xl flex flex-col items-center">
+           <span class="stats-num text-4xl font-black text-black leading-none">10+</span>
+           <span class="stats-label text-black text-xs font-black uppercase tracking-tighter mt-1 text-center">Anos de Experiência</span>
         </div>
       </div>
     </div>
