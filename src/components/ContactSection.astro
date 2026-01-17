@@ -59,19 +59,50 @@
             </button>
           </form>
 
-          <script>
-            document.getElementById('contact-form')?.addEventListener('submit', (e) => {
-              e.preventDefault();
-              const name = (document.getElementById('name') as HTMLInputElement).value;
-              const service = (document.getElementById('service') as HTMLSelectElement).value;
-              const message = (document.getElementById('message') as HTMLTextAreaElement).value;
-              
-              const text = `OlÃ¡, meu nome Ã© *${name}*.\nGostaria de falar sobre: *${service}*.\n\nMensagem: ${message}`;
-              const url = `https://wa.me/5521982769969?text=${encodeURIComponent(text)}`;
-              
-              window.open(url, '_blank');
-            });
+          <script is:inline>
+            // Wait for DOM content to be fully loaded, just in case, though inline at bottom usually works.
+            // Actually, best to just check element existence or run immediately if placed after.
+            // Using a simple IIFE or just global code here.
+            
+            (function() {
+              const form = document.getElementById('contact-form');
+              if (form) {
+                form.addEventListener('submit', function(e) {
+                  e.preventDefault();
+                  const nameInput = document.getElementById('name');
+                  const serviceInput = document.getElementById('service');
+                  const messageInput = document.getElementById('message');
+                  
+                  // Safe access to values
+                  const name = nameInput ? nameInput.value : '';
+                  const service = serviceInput ? serviceInput.value : '';
+                  const message = messageInput ? messageInput.value : '';
+                  
+                  const text = `Olá, meu nome é *${name}*.\nGostaria de falar sobre: *${service}*.\n\nMensagem: ${message}`;
+                  const url = `https://wa.me/5521982769969?text=${encodeURIComponent(text)}`;
+                  
+                  // Google Analytics Event
+                  console.log('Checking gtag:', typeof window.gtag);
+                  if (typeof window.gtag === 'function') {
+                    window.gtag('event', 'generate_lead', {
+                      'event_category': 'engagement',
+                      'event_label': `whatsapp-${service}`,
+                      'value': 1
+                    }); 
+                  }
+                  
+                  window.open(url, '_blank');
+                });
+                console.log('Contact form listener attached');
+                window.__contactFormReady = true;
+              }
+            })();
           </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         </div>
       </div>
     </div>

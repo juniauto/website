@@ -20,6 +20,22 @@ const { title, description = "Juniauto - Guincho e Reboque 24h em Campo Grande R
     <title>{title}</title>
     <meta name="description" content={description} />
     
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K85GPBC786"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      console.log('LAYOUT DEBUG: dataLayer exists?', !!window.dataLayer);
+      console.log('LAYOUT DEBUG: push is spy?', window.dataLayer.push.toString().includes('SPY'));
+      
+      function gtag() {
+        console.log('LAYOUT DEBUG: gtag called');
+        window.dataLayer.push(arguments);
+      }
+      window.gtag = gtag; // Explicitly expose
+      gtag("js", new Date());
+      gtag("config", "G-K85GPBC786");
+    </script>
+
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

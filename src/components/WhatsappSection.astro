@@ -19,7 +19,10 @@ const {
     
     <div class="flex flex-col md:flex-row items-center justify-center gap-6">
       <a
+        id="btn-whatsapp-cta"
         href={zapLink}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
         class="bg-black text-white font-black py-5 px-10 rounded-full text-xl uppercase tracking-tight hover:scale-105 active:scale-95 transition-transform flex items-center gap-3 shadow-2xl"
       >
         <span>Chamar no WhatsApp</span>
@@ -29,6 +32,7 @@ const {
       </a>
       
       <a
+        id="btn-phone-cta"
         href="tel:+5521982769969"
         class="bg-transparent border-4 border-black text-black font-black py-5 px-10 rounded-full text-xl uppercase tracking-tight hover:bg-black hover:text-white transition-all flex items-center gap-3"
       >
@@ -37,4 +41,31 @@ const {
       </a>
     </div>
   </div>
-</section>
+  
+  <script is:inline>
+    (function() {
+      function trackEvent(type) {
+         if (typeof window.gtag === 'function') {
+            window.gtag('event', 'generate_lead', {
+              'event_category': 'engagement',
+              'event_label': type,
+              'value': 1
+            });
+         }
+      }
+
+      var btnWhatsapp = document.getElementById('btn-whatsapp-cta');
+      if (btnWhatsapp) {
+        btnWhatsapp.addEventListener('click', function() {
+          trackEvent('whatsapp-cta');
+        });
+      }
+
+      var btnPhone = document.getElementById('btn-phone-cta');
+      if (btnPhone) {
+        btnPhone.addEventListener('click', function() {
+          trackEvent('phone-cta');
+        });
+      }
+    })();
+  </script>

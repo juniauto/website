@@ -70,7 +70,10 @@ const {
 
       <div class="hero-actions flex flex-wrap gap-4">
         <a
+          id="btn-hero-cta"
           href={ctaLink}
+          target="_blank"
+          rel="nofollow noopener noreferrer"
           class="bg-[#ffd600] text-black font-black py-4 px-8 rounded-full text-lg uppercase tracking-tight hover:scale-105 active:scale-95 transition-transform flex items-center gap-2"
         >
           {ctaText}
@@ -79,6 +82,21 @@ const {
     </div>
   </div>
 </div>
+
+<script is:inline>
+  var btnHero = document.getElementById('btn-hero-cta');
+  if (btnHero) {
+    btnHero.addEventListener('click', function() {
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'generate_lead', {
+          'event_category': 'engagement',
+          'event_label': 'whatsapp-hero',
+          'value': 1
+        });
+      }
+    });
+  }
+</script>
 
 <style>
   .hero-section {
