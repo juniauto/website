@@ -10,8 +10,8 @@
   "dependencies": {
     "classnames": "^2.2.6",
     "next": "^11.0.1",
-    "preact": "^10.5.14",
-    "preact-render-to-string": "^5.1.19",
+    "preact": "^10.28.2",
+    "preact-render-to-string": "^6.6.5",
     "react": "npm:@preact/compat",
     "react-dom": "npm:@preact/compat",
     "react-lazyload": "^3.0.0",
