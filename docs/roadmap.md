@@ -7,14 +7,16 @@ This document breaks down the [Organic Dominance PRD](prd-organic-dominance.md) 
 ## 🏗 Phase 1: The "Emergency" Foundation (Weeks 1-2)
 **Goal:** Ensure the site captures the "Panic Traffic" immediately. Fixing speed and basic availability.
 
-### 1.1 Technical Core (@dev)
+### 1.1 Technical & Aesthetic Core (@dev + @pm)
 - [ ] **Mobile Speed Audit:** Achieve <1.5s LCP on 4G networks.
 - [ ] **Core Schema:** Implement `LocalBusiness` and `EmergencyRoadsideAssistance` JSON-LD.
+- [ ] **Aesthetic Elevation:** Polish the Hero section with modern typography and subtle gradients (Glassmorphism).
 - [ ] **Click-to-Call Verify:** Ensure all "Chamar Agora" buttons work perfectly on iOS/Android.
 
-### 1.2 Core Content (@copy + @seo)
-- [ ] **Home Page Rewrite:** Focus on "24h", "Chegamos Rápido", and "Aceitamos Pix/Cartão".
-- [ ] **Service Page (General):** One strong page for "Reboque em Campo Grande" targeting the main head-tail keywords.
+### 1.2 Narrative & Content Depth (@copy + @seo)
+- [ ] **Home Page Upgrade:** Rewrite "About Us" with narrative depth (Fleet details, service history) and replace irrelevant images with premium fleet photos.
+- [ ] **Expanding the Cluster:** Expand from 3 to 6 high-impact service cards (Cars, Motorcycles, Heavy, Battery, Tires, Fuel).
+- [ ] **Service Page (General):** One strong page for "Reboque em Campo Grande" targeting the main keywords with rich content.
 
 **🎯 Checkpoint:** Site is fast, mobile-ready, and ranks for the main "Reboque Campo Grande" term.
 
@@ -27,9 +29,11 @@ This document breaks down the [Organic Dominance PRD](prd-organic-dominance.md) 
 - [ ] **Fleet Gallery:** Widget showing real photos of the trucks (no stock photos).
 - [ ] **"Price Estimator" Block:** A simple section explaining "Starting from R$ X" or factors that influence price (transparency).
 
-### 2.2 Conversion Upgrades (@copy)
+### 2.2 Conversion & Authority Upgrades (@copy + @seo)
+- [ ] **Authority Content Blocks:** Add a comprehensive FAQ section (Pricing, Timing, Safety).
 - [ ] **"Rastreio" Promise:** Messaging about "Acompanhe seu Guicheiro em Tempo Real" (even if manual via WhatsApp location initially).
 - [ ] **Social Proof:** Add testimonials specifically mentioning "Salvou minha vida na Av. Brasil".
+- [ ] **Detailed Service Descriptions:** Expand "General" services into specific blocks for: *Motos, Pesados, Carga de Bateria, and Troca de Pneu*.
 
 **🎯 Checkpoint:** Conversion rate increases; users stop asking "Is this real?" on WhatsApp.
 
@@ -38,12 +42,13 @@ This document breaks down the [Organic Dominance PRD](prd-organic-dominance.md) 
 ## 📍 Phase 3: Hyper-Local Expansion (Weeks 5-6)
 **Goal:** Dominate the "micro-neighborhoods" of Zona Oeste.
 
-### 3.1 The "Neighborhood Map" (@seo)
-- [ ] **Cluster Creation:** Create sub-pages for:
+### 3.1 The "Neighborhood Map" (@seo + @copy)
+- [ ] **Cluster Creation:** Create sub-pages or deep-content sections for:
     - *Reboque West Shopping / Estrada do Mendanha*
     - *Guincho Av. Brasil (Trecho Campo Grande)*
     - *Reboque Rodoviária de Campo Grande*
-    - *Socorro 24h Santíssimo & Vasconcelos*
+    - *Socorro 24h Santíssimo, Vasconcelos & Senador Camará*
+- [ ] **Localized Footer:** Add a "Coverage Area" map listing all sub-neighborhoods for better indexing.
 
 ### 3.2 Landing Page Factory (@dev)
 - [ ] **Dynamic Template:** Create a reusable Next.js layout for these location pages that keeps high performance.

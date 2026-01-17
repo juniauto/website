@@ -38,52 +38,85 @@ const content: ContactCardContent[] = [{
 
 export default function ContactSection() {
   return (
-    <div id="contact" className="contact-area">
-      <div className="contact-inner area-padding">
-        <div className="contact-overly" />
-        <div className="container ">
-          <div className="row">
-            <div className="col-md-12 col-sm-12 col-xs-12">
-              <div className="section-headline text-center">
-                <h2>Fale Conosco</h2>
+    <section id="contact" className="contact-redesign">
+      <div className="container">
+        <div className="section-header text-center">
+          <h2 className="text-gradient">Canais de Atendimento</h2>
+          <p>Estamos prontos para te atender a qualquer hora do dia ou da noite.</p>
+        </div>
+
+        <div className="row">
+          {content.map((current, index) => (
+            <div className="col-md-4" key={index}>
+              <div className="contact-card glass-card">
+                <div className="contact-icon">{current.icon}</div>
+                <div className="contact-info">{current.content}</div>
               </div>
             </div>
-          </div>
+          ))}
+        </div>
 
-          <div className="row">
-            {content.map((current, index) => {
-              return (
-                <div className="col-md-4 col-sm-4 col-xs-12" key={index.toString()}>
-                  <div className="contact-icon text-center">
-                    <div className="single-icon">
-                      <div className="single-icon-rounded">
-                        {current.icon}
-                      </div>
-
-                      {current.content}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          <div className="row">
-            {/* Start Google Map */}
-            <div className="col-md-6 col-sm-6 col-xs-12">
-              {/* Start Map */}
-              <LazyIframe loading="lazy" title="Mapa com a nossa área de atuação" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117622.3592560307!2d-43.61882688731093!3d-22.887585060535006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be17999363715%3A0x46c3f27867ad9332!2sCampo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1595089607843!5m2!1spt-BR!2sbr" style={{ border: 0 }} allowFullScreen width="100%" height={380} frameBorder={0} />
-              {/* End Map */}
+        <div className="row mt-5">
+          <div className="col-md-6">
+            <div className="map-wrapper glass-card">
+              <LazyIframe loading="lazy" title="Nossa área de atuação" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117622.3592560307!2d-43.61882688731093!3d-22.887585060535006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9be17999363715%3A0x46c3f27867ad9332!2sCampo%20Grande%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1595089607843!5m2!1spt-BR!2sbr" style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg)' }} allowFullScreen width="100%" height={400} frameBorder={0} />
             </div>
-            {/* End Google Map */}
-            {/* Start  contact */}
-            <div className="col-md-6 col-sm-6 col-xs-12">
+          </div>
+          <div className="col-md-6">
+            <div className="form-wrapper glass-card">
               <ContactUsForm />
             </div>
-            {/* End Left contact */}
           </div>
         </div>
       </div>
-    </div>
+      <style jsx>{`
+        .contact-redesign {
+          padding: 100px 0;
+          background: var(--background-deep);
+        }
+        .section-header {
+          margin-bottom: 60px;
+        }
+        .section-header h2 {
+          font-size: 2.8rem;
+          font-weight: 800;
+          margin-bottom: 20px;
+          font-family: var(--font-main);
+        }
+        .contact-card {
+          padding: 30px;
+          text-align: center;
+          margin-bottom: 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .contact-icon {
+          color: var(--accent-yellow);
+          margin-bottom: 20px;
+        }
+        .contact-info :global(p) {
+          color: var(--text-secondary);
+          margin-bottom: 0;
+          font-family: var(--font-main);
+        }
+        .contact-info :global(span) {
+          color: #fff;
+          font-weight: 700;
+        }
+        .map-wrapper, .form-wrapper {
+          overflow: hidden;
+          height: 100%;
+        }
+        .mt-5 {
+          margin-top: 3rem !important;
+        }
+        @media (max-width: 768px) {
+          .section-header h2 {
+            font-size: 2rem;
+          }
+        }
+      `}</style>
+    </section>
   )
 }

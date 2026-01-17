@@ -1,0 +1,66 @@
+:root {
+    --background-deep: #0F0F10;
+    --accent-yellow: #FFD600;
+    --accent-yellow-hover: #FFC400;
+    --text-primary: #FFFFFF;
+    --text-secondary: #B0B0B0;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-blur: blur(16px);
+    --depth-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.5);
+    --font-main: 'Inter', sans-serif;
+}
+
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--depth-shadow);
+    border-radius: 16px;
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: var(--accent-yellow);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #FFFFFF 0%, var(--accent-yellow) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-premium {
+    background: var(--accent-yellow);
+    color: #000;
+    font-weight: 800;
+    padding: 14px 40px;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-family: var(--font-main);
+}
+
+.btn-premium:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 214, 0, 0.5);
+    background: var(--accent-yellow-hover);
+}
+
+@media (max-width: 400px) {
+    .btn-premium {
+        padding: 12px 24px;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}

@@ -25,7 +25,7 @@ const Footer = () => (
                                 <div className="footer-icons">
                                     <ul>
                                         <li>
-                                            <a onClick={() => onFacebookPlusClick('footer')}  rel="nofollow noreferrer" target="_blank" href="https://fb.com/autosocorrojuniauto">
+                                            <a onClick={() => onFacebookPlusClick('footer')} rel="nofollow noreferrer" target="_blank" href="https://fb.com/autosocorrojuniauto">
                                                 <span className="sr-only">curta nossa página no Facebook</span>
                                                 <FacebookIcon className="footer-icon" height={16} />
                                             </a>
@@ -97,6 +97,52 @@ const Footer = () => (
                         </div>
                     </div>
                 </div>
+                <div className="row footer-bottom-links">
+                    <div className="col-md-12">
+                        <div className="footer-links-grid">
+                            <h5>Principais Áreas de Atendimento em Campo Grande:</h5>
+                            <div className="neighborhood-links">
+                                <a href="/reboque-em/reboque-em-cosmos">Reboque em Cosmos</a>
+                                <a href="/reboque-em/reboque-em-inhoaiba">Reboque em Inhoaíba</a>
+                                <a href="/reboque-em/reboque-em-santissimo">Reboque em Santíssimo</a>
+                                <a href="/reboque-em/reboque-em-senador-vasconcelos">Reboque em Senador Vasconcelos</a>
+                                <a href="/reboque-em/reboque-em-campo-grande">Guincho Campo Grande</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style jsx>{`
+                    .footer-bottom-links {
+                        border-top: 1px solid rgba(255,255,255,0.1);
+                        padding-top: 30px;
+                        margin-top: 50px;
+                    }
+                    .footer-links-grid h5 {
+                        color: #fff;
+                        font-size: 1rem;
+                        margin-bottom: 20px;
+                        font-weight: 700;
+                    }
+                    .neighborhood-links {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 15px 25px;
+                    }
+                    .neighborhood-links a {
+                        color: var(--text-secondary);
+                        font-size: 0.9rem;
+                        transition: color 0.3s;
+                        text-decoration: none;
+                    }
+                    .neighborhood-links a:hover {
+                        color: var(--accent-yellow);
+                    }
+                    @media (max-width: 768px) {
+                        .neighborhood-links {
+                            gap: 10px 15px;
+                        }
+                    }
+                `}</style>
             </div>
         </div>
         <div className="footer-area-bottom">
@@ -106,7 +152,7 @@ const Footer = () => (
                         <div className="copyright text-center">
                             <p>
                                 © Copyright <strong>Juniauto</strong>. Todos os direitos reservados
-              </p>
+                            </p>
                         </div>
                         <div className="credits">
                             {/*

@@ -37,8 +37,13 @@ To transform Juniauto into the leader for "reboque/guincho" in Campo Grande (RJ)
 - Optimize headers and CTAs for "Rescue Psychology" (speed, trust, 24h).
 - Refine trust signals (Payment methods, arrival time).
 
-### Step 5: Market Dominance implementation Plan
-- Consolidate findings into a "Dominance Roadmap" artifact.
+### Step 5: Mobile-First Validation & Final Review
+- **Mandatory QA**: Perform `browser_subagent` checks on mobile viewports (e.g., 390px width). 
+- **Checklist**:
+    - [ ] Titles/Headers don't overflow on small screens.
+    - [ ] LCP < 2s for mobile-simulated network.
+    - [ ] WhatsApp/Call buttons are thumb-friendly (min 44x44px target).
+- Consolidate findings into a "Dominance Roadmap" or "Walkthrough" artifact.
 - Include Map vs Search strategy, tech fixes, content map, and messaging guide.
 
 ---
