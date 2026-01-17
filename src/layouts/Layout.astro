@@ -1,5 +1,6 @@
 ---
 import '../styles/globals.css';
+import '@fontsource-variable/outfit';
 
 interface Props {
   title: string;
@@ -33,10 +34,8 @@ const { title, description = "Juniauto - Guincho e Reboque 24h em Campo Grande R
       gtag("config", "G-K85GPBC786");
     </script>
 
-    <!-- Google Fonts: Outfit -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Outfit (Self-hosted for performance) -->
+    <!-- Removed CDN links in favor of @fontsource/outfit import in frontmatter -->
   </head>
   <body>
     <slot />
