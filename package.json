@@ -6,6 +6,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "quality:audit": "node scripts/lighthouse-audit.js",
+    "quality:analyze": "node scripts/analyze-report.js",
+    "quality:console": "node scripts/show-console-errors.js",
     "astro": "astro"
   },
   "dependencies": {
