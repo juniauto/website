@@ -51,7 +51,7 @@ const ctaLink = `https://wa.me/5521982769969?text=${encodeURIComponent(ctaMessag
        <Content />
     </AboutUs>
 
-    <RichFAQ />
+    <RichFAQ customFaqs={entry.data.faq} />
     
     <WhatsappSection zapLink={ctaLink} />
     

@@ -25,6 +25,10 @@ const neighborhoods = defineCollection({
         keywords: z.string(),
         landmark: z.string().optional(),
         top_priority: z.boolean().optional(),
+        faq: z.array(z.object({
+            question: z.string(),
+            answer: z.string(),
+        })).optional(),
     }),
 });
 
