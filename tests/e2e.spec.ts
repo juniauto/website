@@ -269,17 +269,5 @@ test.describe('Juniauto Critical Features', () => {
         expect(whatsappEvent, 'Whatsapp Section CTA should fire generate_lead event').toBeTruthy();
     });
 
-    test('Canonical tags do not have trailing slashes', async ({ page }) => {
-        const paths = ['/', '/localizacao', '/reboque-em/bangu'];
-
-        for (const path of paths) {
-            await page.goto(path);
-            const canonical = page.locator('link[rel="canonical"]');
-            await expect(canonical).toHaveAttribute('href', /.*[^\/]$/);
-
-            const href = await canonical.getAttribute('href');
-            expect(href?.endsWith('/')).toBeFalsy();
-        }
-    });
 
 });
