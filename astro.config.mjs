@@ -6,7 +6,10 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
     output: 'static',
-    integrations: [tailwind(), sitemap()],
     site: 'https://www.juniauto.com.br',
-    trailingSlash: 'never',
+    trailingSlash: 'always',
+    build: {
+        format: 'directory'
+    },
+    integrations: [tailwind(), sitemap()],
 });
