@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/fix-sitemap.mjs",
+    "build": "astro build",
     "preview": "astro preview",
     "quality:audit": "node scripts/lighthouse-audit.js",
     "quality:analyze": "node scripts/analyze-report.js",

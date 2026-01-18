@@ -7,9 +7,9 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
     output: 'static',
     site: 'https://www.juniauto.com.br',
-    trailingSlash: 'always',
+    trailingSlash: 'never',
     build: {
-        format: 'directory'
+        format: 'file'
     },
     integrations: [tailwind(), sitemap()],
 });
