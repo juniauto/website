@@ -11,9 +11,57 @@ import Footer from '../components/Footer.astro';
 
 const title = "Guincho em Campo Grande RJ 24h | Chegamos Rápido - Juniauto";
 const description = "Precisa de reboque em Campo Grande? A Juniauto é líder em agilidade com base local. Atendimento 24h para carros e motos. Preço justo e resgate imediato.";
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "AutoTowingService",
+  "name": "Juniauto - Guincho e Reboque 24h",
+  "description": description,
+  "url": "https://www.juniauto.com.br",
+  "telephone": "+5521982769969",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Estrada do Mendanha, 1370",
+    "addressLocality": "Campo Grande",
+    "addressRegion": "RJ",
+    "postalCode": "23087-285",
+    "addressCountry": "BR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -22.884523,
+    "longitude": -43.551061
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+    ],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Campo Grande, Rio de Janeiro" },
+    { "@type": "AdministrativeArea", "name": "Zona Oeste, Rio de Janeiro" },
+    { "@type": "AdministrativeArea", "name": "Estrada do Mendanha" },
+    { "@type": "AdministrativeArea", "name": "West Shopping" },
+    { "@type": "AdministrativeArea", "name": "Avenida Brasil" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços de Reboque",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reboque de Carros" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reboque de Motos" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carga de Bateria" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Troca de Pneu" } }
+    ]
+  }
+};
 ---
 
 <Layout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
   <Navigation />
   
   <main class="pt-20">
