@@ -30,9 +30,23 @@ const defaultFaqs: FAQItem[] = [
 ];
 
 const faqs = customFaqs && customFaqs.length > 0 ? customFaqs : defaultFaqs;
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
 ---
 
 <section class="faq-section py-20 bg-[#0a0a0a]">
+  <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
   <div class="container mx-auto px-4">
     <div class="section-header text-center mb-16">
       <h2 class="text-gradient text-4xl md:text-5xl font-extrabold mb-4">Dúvidas Frequentes</h2>

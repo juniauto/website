@@ -8,7 +8,9 @@ import RichFAQ from '../../components/RichFAQ.astro';
 import WhatsappSection from '../../components/WhatsappSection.astro';
 import ContactSection from '../../components/ContactSection.astro';
 import Footer from '../../components/Footer.astro';
+import heroBg from '../../assets/hero-bg.png';
 
+const siteUrl = "https://www.juniauto.com.br";
 export async function getStaticPaths() {
   const neighborhoodEntries = await getCollection('neighborhoods');
   return neighborhoodEntries.map(entry => ({
@@ -21,13 +23,44 @@ const { Content } = await entry.render();
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": `Juniauto Reboque em ${entry.data.name}`,
-  "description": entry.data.description,
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": entry.data.name
-  }
+  "@graph": [
+    {
+      "@type": "AutomotiveBusiness",
+      "name": `Juniauto Reboque em ${entry.data.name}`,
+      "description": entry.data.description,
+      "url": `https://www.juniauto.com.br/reboque-em/${entry.slug}`,
+      "telephone": "+5521982769969",
+      "image": siteUrl + heroBg.src,
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": entry.data.name
+      },
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Juniauto - Reboque 24h",
+        "@id": "https://www.juniauto.com.br/#organization",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Estr. Guandú do Sapé, 1455",
+          "addressLocality": "Campo Grande",
+          "addressRegion": "RJ",
+          "postalCode": "23095-071",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -22.884523,
+          "longitude": -43.551061
+        },
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.juniauto.com.br/header_logo.png",
+          "width": "373",
+          "height": "144"
+        }
+      }
+    }
+  ]
 };
 
 const ctaMessage = `Olá, preciso de um reboque em ${entry.data.name}.`;

@@ -6,7 +6,9 @@ import Hero from '../../components/Hero.astro';
 import RichFAQ from '../../components/RichFAQ.astro';
 import WhatsappSection from '../../components/WhatsappSection.astro';
 import Footer from '../../components/Footer.astro';
+import heroBg from '../../assets/hero-bg.png';
 
+const siteUrl = "https://www.juniauto.com.br";
 export async function getStaticPaths() {
   const serviceEntries = await getCollection('services');
   return serviceEntries.map(entry => ({
@@ -19,18 +21,42 @@ const { Content } = await entry.render();
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": entry.data.schemaType,
-  "name": entry.data.title,
-  "description": entry.data.description,
-  "provider": {
-    "@type": "LocalBusiness",
-    "name": "Juniauto Guincho",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Campo Grande",
-      "addressRegion": "RJ"
+  "@graph": [
+    {
+      "@type": entry.data.schemaType === 'LocalBusiness' ? 'AutomotiveBusiness' : entry.data.schemaType,
+      "name": entry.data.title,
+      "description": entry.data.description,
+      "url": `https://www.juniauto.com.br/servicos/${entry.slug}`,
+      "image": siteUrl + heroBg.src,
+      ...(entry.data.schemaType === 'Service' && { "serviceType": entry.data.shortTitle }),
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Juniauto - Reboque 24h",
+        "@id": "https://www.juniauto.com.br/#organization",
+        "telephone": "+5521982769969",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Estr. Guandú do Sapé, 1455",
+          "addressLocality": "Campo Grande",
+          "addressRegion": "RJ",
+          "postalCode": "23095-071",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -22.884523,
+          "longitude": -43.551061
+        },
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.juniauto.com.br/header_logo.png",
+          "width": "373",
+          "height": "144"
+        }
+      }
     }
-  }
+  ]
 };
 
 const ctaMessage = `Olá, preciso de ajuda com ${entry.data.shortTitle} em Campo Grande.`;

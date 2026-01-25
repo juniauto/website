@@ -4,7 +4,7 @@ shortTitle: "Reboque de Motos"
 h1: "Transporte e Reboque de Motos com Segurança em Campo Grande"
 description: "Moto parou? Ficar parado no acostamento é perigoso. Chame a Juniauto para um resgate especializado com fixação correta e plataforma baixa."
 icon: "MotorcycleIcon"
-schemaType: "TowingService"
+schemaType: "Service"
 keywords: "reboque de motos, guincho para motos, transporte de moto rj"
 benefits:
   - "Cintas de fixação profissionais"

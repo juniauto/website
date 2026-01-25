@@ -4,7 +4,7 @@ shortTitle: "Caminhões e Pesados"
 h1: "Remoção de Caminhões e Veículos Pesados em Campo Grande RJ"
 description: "Precisa de guincho para caminhão baú ou utilitário? A Juniauto possui equipamentos de alta performance para transporte pesado 24h."
 icon: "LocalShippingIcon"
-schemaType: "TowingService"
+schemaType: "Service"
 keywords: "reboque de caminhão, guincho pesado, transporte de vans rj"
 benefits:
   - "Remoção técnica pesada"

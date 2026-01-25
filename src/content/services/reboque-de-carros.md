@@ -4,7 +4,7 @@ shortTitle: "Reboque de Carros"
 h1: "Serviço de Reboque para Carros e SUVs em Campo Grande"
 description: "Carro quebrado ou batido? Não se arrisque na rua. A Juniauto oferece reboque plataforma 24h com agilidade e preço justo em toda a Zona Oeste."
 icon: "CarIcon"
-schemaType: "TowingService"
+schemaType: "Service"
 keywords: "reboque de carros, guincho para carros, reboque plataforma campo grande"
 benefits:
   - "Atendimento Local (Moramos aqui)"

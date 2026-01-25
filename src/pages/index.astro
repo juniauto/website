@@ -8,55 +8,98 @@ import RichFAQ from '../components/RichFAQ.astro';
 import WhatsappSection from '../components/WhatsappSection.astro';
 import ContactSection from '../components/ContactSection.astro';
 import Footer from '../components/Footer.astro';
+import heroBg from '../assets/hero-bg.png';
 
+const siteUrl = "https://www.juniauto.com.br";
 const title = "Guincho em Campo Grande RJ 24h | Chegamos Rápido - Juniauto";
 const description = "Precisa de reboque em Campo Grande? A Juniauto é líder em agilidade com base local. Atendimento 24h para carros e motos. Preço justo e resgate imediato.";
 
 const businessSchema = {
   "@context": "https://schema.org",
-  "@type": "AutoTowingService",
-  "name": "Juniauto - Guincho e Reboque 24h",
-  "description": description,
-  "url": "https://www.juniauto.com.br",
-  "telephone": "+5521982769969",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Estrada do Mendanha, 1370",
-    "addressLocality": "Campo Grande",
-    "addressRegion": "RJ",
-    "postalCode": "23087-285",
-    "addressCountry": "BR"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -22.884523,
-    "longitude": -43.551061
-  },
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
-    ],
-    "opens": "00:00",
-    "closes": "23:59"
-  },
-  "areaServed": [
-    { "@type": "AdministrativeArea", "name": "Campo Grande, Rio de Janeiro" },
-    { "@type": "AdministrativeArea", "name": "Zona Oeste, Rio de Janeiro" },
-    { "@type": "AdministrativeArea", "name": "Estrada do Mendanha" },
-    { "@type": "AdministrativeArea", "name": "West Shopping" },
-    { "@type": "AdministrativeArea", "name": "Avenida Brasil" }
-  ],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Serviços de Reboque",
-    "itemListElement": [
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reboque de Carros" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reboque de Motos" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carga de Bateria" } },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Troca de Pneu" } }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.juniauto.com.br/#organization",
+      "name": "Juniauto - Reboque 24h",
+      "url": "https://www.juniauto.com.br",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.juniauto.com.br/header_logo.png",
+        "width": "373",
+        "height": "144"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+5521982769969",
+        "contactType": "customer service",
+        "areaServed": "BR",
+        "availableLanguage": "Portuguese"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.juniauto.com.br/#website",
+      "url": "https://www.juniauto.com.br",
+      "name": "Juniauto",
+      "publisher": {
+        "@id": "https://www.juniauto.com.br/#organization"
+      }
+    },
+    {
+      "@type": "AutomotiveBusiness",
+      "@id": "https://www.juniauto.com.br/#service",
+      "name": "Juniauto - Guincho e Reboque 24h em Campo Grande",
+      "description": description,
+      "url": "https://www.juniauto.com.br",
+      "telephone": "+5521982769969",
+      "priceRange": "$$",
+      "image": siteUrl + heroBg.src,
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Estr. Guandú do Sapé, 1455",
+        "addressLocality": "Campo Grande",
+        "addressRegion": "RJ",
+        "postalCode": "23095-071",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.884523,
+        "longitude": -43.551061
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Campo Grande, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Santíssimo, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Senador Vasconcelos, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Bangu, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Realengo, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Paciência, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Santa Cruz, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Guaratiba, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Estrada do Mendanha, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "West Shopping, Rio de Janeiro" },
+        { "@type": "AdministrativeArea", "name": "Avenida Brasil, Rio de Janeiro" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Serviços de Reboque",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reboque de Carros" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reboque de Motos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carga de Bateria" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Troca de Pneu" } }
+        ]
+      }
+    }
+  ]
 };
 ---
 
